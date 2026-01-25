@@ -62,7 +62,7 @@ int main() {
         // Exit option
         if(choice == 11){
             printf("\n%s , Thanks for using this Amazing Maths Tookit!!!\n", name);
-            printf("                  Come back Again!!!\n");
+            printf("                  Come back Again!!!!\n");
             return 0;              // End program
         }
 
