@@ -104,7 +104,7 @@ Stores and displays calculation history with an option to clear history.
 
 ### 1️⃣ Compile the Project
 ```
-gcc main.c basic_ops.c scientific_ops.c number_ops.c matrix_ops.c stats_ops.c financial_ops.c converter_ops.c realworld_ops.c pattern_ops.c history_ops.c -o toolkit
+gcc main.c basic_ops.c scientific_ops.c number_ops.c matrix_ops.c stats_ops.c financial_ops.c converter_ops.c realworld_ops.c pattern_ops.c history_ops.c -o toolkit -lm
 ```
 ### 2️⃣ Run the Program
 ```
