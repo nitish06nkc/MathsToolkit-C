@@ -552,11 +552,16 @@ int main() {
                             // ---- Temperature Conversion ----
                             if(uop==1) {
                                 int t;
-                                printf("\n1. Celcius -> Fahrenheit\n2. Fahrenheit -> Celcius\n3. Back\n");
+                                printf("\n1. Celcius -> Fahrenheit\n2. Fahrenheit -> Celcius\n3. Celcius -> Kelvin\n4. Kelvin -> Celcius\n5. Fahrenheit -> Kelvin\n6. Kelvin -> Fahrenheit\n7. Back\n");
                                 printf("\nEnter Choice: ");
                                 scanf("%d",&t);
                                 if(t==1) c_to_f();     // Celsius to Fahrenheit
                                 else if(t==2) f_to_c(); // Fahrenheit to Celsius
+                                else if(t==3) c_to_k(); // Celsius to Kelvin
+                                else if(t==4) k_to_c(); // Kelvin to Celsius
+                                else if(t==5) f_to_k(); // Fahrenheit to Kelvin
+                                else if(t==6) k_to_f(); // Kelvin to Fahrenheit
+                                else if(t==7); break; // Back
                             }
 
                             // ---- Length Conversion ----

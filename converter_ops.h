@@ -9,6 +9,17 @@ void c_to_f();
 // Fahrenheit to Celsius
 void f_to_c();
 
+// Celsius to Kelvin
+void c_to_k();
+
+// Kelvin to Celsius
+void k_to_c();
+
+// Fahrenheit to Kelvin
+void f_to_k();
+
+// Kelvin to Fahrenheit
+void k_to_f();
 
 // ================= LENGTH CONVERSIONS =================
 

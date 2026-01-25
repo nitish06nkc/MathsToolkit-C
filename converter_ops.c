@@ -34,6 +34,61 @@ void f_to_c() {
     save_history(log);
 }
 
+// Convert Celsius to Kelvin
+void c_to_k() {
+    double c, k;
+    printf("\nEnter Celsius: ");
+    scanf("%lf",&c);
+
+    k = c + 273.15; // Conversion formula
+    printf("\n%.2lf C = %.2lf K\n", c, k);
+
+    char log[200];
+    sprintf(log, "TEMP: %.2lf C -> %.2lf K", c, k);
+    save_history(log);
+}
+
+// Convert Kelvin to Celsius
+void k_to_c() {
+    double k, c;
+    printf("\nEnter Kelvin: ");
+    scanf("%lf",&k);
+
+    c = k - 273.15; // Conversion formula
+    printf("\n%.2lf K = %.2lf C\n", k, c);
+
+    char log[200];
+    sprintf(log, "TEMP: %.2lf K -> %.2lf C", k, c);
+    save_history(log);
+}
+
+// Convert Fahrenheit to Kelvin
+void f_to_k() {
+    double f, k;
+    printf("\nEnter Fahrenheit: ");
+    scanf("%lf",&f);
+
+    k = (f - 32) * 5/9 + 273.15; // Conversion formula
+    printf("\n%.2lf F = %.2lf K\n", f, k);
+
+    char log[200];
+    sprintf(log, "TEMP: %.2lf F -> %.2lf K", f, k);
+    save_history(log);
+}
+
+// Convert Kelvin to Fahrenheit
+void k_to_f() {
+    double k, f;
+    printf("\nEnter Kelvin: ");
+    scanf("%lf",&k);
+
+    f = (k - 273.15) * 9/5 + 32; // Conversion formula
+    printf("\n%.2lf K = %.2lf F\n", k, f);
+
+    char log[200];
+    sprintf(log, "TEMP: %.2lf K -> %.2lf F", k, f);
+    save_history(log);
+}
 
 // ================= LENGTH CONVERSIONS =================
 
