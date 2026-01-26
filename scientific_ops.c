@@ -92,45 +92,91 @@ void trig_menu() {
         printf("\n1. sin");
         printf("\n2. cos");
         printf("\n3. tan");
-        printf("\n4. Back\n");
+        printf("\n4. sin inverse");
+        printf("\n5. cos inverse");
+        printf("\n6. tan inverse");
+        printf("\n7. Back\n");
 
         printf("\nEnter choice: ");
         scanf("%d",&choice);
 
-        if(choice==4) break;
+        if(choice==7) break;
+        else if(choice>=1 && choice<=3) {
+            printf("\nEnter angle in degrees: ");
+            scanf("%lf",&angle);
 
-        printf("\nEnter angle in degrees: ");
-        scanf("%lf",&angle);
+            double rad = deg_to_rad(angle);
+            double result;
 
-        double rad = deg_to_rad(angle);
-        double result;
-
-        if(choice==1) {
-            result = sin(rad);
-            printf("\nsin = %.6lf\n", result);
-            char log[200];
-            sprintf(log, "SIN: %.2lf deg = %.6lf", angle, result);
-            save_history(log);
-        }
-        else if(choice==2) {
-            result = cos(rad);
-            printf("\ncos = %.6lf\n", result);
-            char log[200];
-            sprintf(log, "COS: %.2lf deg = %.6lf", angle, result);
-            save_history(log);
-        }
-        else if(choice==3) {
-            result = tan(rad);
-            printf("\ntan = %.6lf\n", result);
-            char log[200];
-            sprintf(log, "TAN: %.2lf deg = %.6lf", angle, result);
-            save_history(log);
-        }
-        else {
-            printf("\nInvalid choice\n");
-        }
+            if(choice==1) {
+                result = sin(rad);
+                printf("\nsin = %.6lf\n", result);
+                char log[200];
+                sprintf(log, "SIN: %.2lf deg = %.6lf", angle, result);
+                save_history(log);
+                continue;
+            }
+            else if(choice==2) {
+                result = cos(rad);
+                printf("\ncos = %.6lf\n", result);
+                char log[200];
+                sprintf(log, "COS: %.2lf deg = %.6lf", angle, result);
+                save_history(log);
+                continue;
+            }
+            else if(choice==3) {
+                result = tan(rad);
+                printf("\ntan = %.6lf\n", result);
+                char log[200];
+                sprintf(log, "TAN: %.2lf deg = %.6lf", angle, result);
+                save_history(log);
+                continue;
+            }
+            else {
+                printf("\nInvalid choice\n");
+                continue;
+            }
     }
-}
+        else if(choice>=4 && choice<=6){
+            double value , result;
+            printf("\nEnter value: ");
+            scanf("%lf",&value);
+
+            if(value < -1 || value > 1) {
+                printf("\nValue out of range for inverse trigonometric functions\n");
+                continue;
+            }
+
+            if(choice==4){
+                result = asin(value);
+                printf("\nsin inverse = %.6lf rad\n", result);
+                char log[200];
+                sprintf(log, "SIN INV: %.6lf = %.6lf rad", value, result);
+                save_history(log);
+                continue;
+            }
+            else if(choice==5){
+                result = acos(value);
+                printf("\ncos inverse = %.6lf rad\n", result);
+                char log[200];
+                sprintf(log, "COS INV: %.6lf = %.6lf rad", value, result);
+                save_history(log);
+                continue;
+            }
+            else if(choice==6){
+                result = atan(value);
+                printf("\ntan inverse = %.6lf rad\n", result);
+                char log[200];
+                sprintf(log, "TAN INV: %.6lf = %.6lf rad", value, result);
+                save_history(log);
+                continue;
+            }
+            else {
+                printf("\nInvalid choice\n");
+                continue;
+            }
+        }
+}}
 
 // Finds roots of quadratic equation ax^2 + bx + c = 0
 void quadratic_roots(double a , double b , double c) {
