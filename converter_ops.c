@@ -334,6 +334,146 @@ void ml_to_l() {
     save_history(log);
 }
 
+// Gallon to Litre
+void gallon_to_l() {
+    double gal, l;
+    printf("\nEnter Gallon: ");
+    scanf("%lf",&gal);
+
+    l = gal*3.78541;
+    printf("\n%.2lf gal = %.4lf L\n",gal,l);
+
+    char log[200];
+    sprintf(log, "VOLUME: %.2lf gal -> %.4lf L", gal, l);
+    save_history(log);
+}
+
+// Litre to Gallon
+void l_to_gallon() {
+    double l, gal;
+    printf("\nEnter Litre: ");
+    scanf("%lf",&l);
+
+    gal = l/3.78541;
+    printf("\n%.2lf L = %.4lf gal\n",l,gal);
+
+    char log[200];
+    sprintf(log, "VOLUME: %.2lf L -> %.4lf gal", l, gal);
+    save_history(log);
+}
+
+// Fluid Ounce to Millilitre
+void floz_to_ml() {
+    double floz, ml;
+    printf("\nEnter Fluid Ounce: ");
+    scanf("%lf",&floz);
+
+    ml = floz*29.5735;
+    printf("\n%.2lf fl oz = %.2lf mL\n",floz,ml);
+
+    char log[200];
+    sprintf(log, "VOLUME: %.2lf fl oz -> %.2lf mL", floz, ml);
+    save_history(log);
+}
+
+// Millilitre to Fluid Ounce
+void ml_to_floz() {
+    double ml, floz;
+    printf("\nEnter Mili Litre: ");
+    scanf("%lf",&ml);
+
+    floz = ml/29.5735;
+    printf("\n%.2lf mL = %.4lf fl oz\n",ml,floz);
+
+    char log[200];
+    sprintf(log, "VOLUME: %.2lf mL -> %.4lf fl oz", ml, floz);
+    save_history(log);
+}
+
+// Pint to Litre
+void pint_to_l() {
+    double pint, l;
+    printf("\nEnter Pint: ");
+    scanf("%lf",&pint);
+
+    l = pint*0.473176;
+    printf("\n%.2lf pint = %.4lf L\n",pint,l);
+
+    char log[200];
+    sprintf(log, "VOLUME: %.2lf pint -> %.4lf L", pint, l);
+    save_history(log);
+}
+
+// Litre to Pint
+void l_to_pint() {
+    double l, pint;
+    printf("\nEnter Litre: ");
+    scanf("%lf",&l);
+
+    pint = l/0.473176;
+    printf("\n%.2lf L = %.4lf pint\n",l,pint);
+
+    char log[200];
+    sprintf(log, "VOLUME: %.2lf L -> %.4lf pint", l, pint);
+    save_history(log);
+}
+
+// Cubic Meter to Litre
+void cubicm_to_l() {
+    double cubicm, l;
+    printf("\nEnter Cubic Meter: ");
+    scanf("%lf",&cubicm);
+
+    l = cubicm*1000;
+    printf("\n%.2lf m^3 = %.2lf L\n",cubicm,l);
+
+    char log[200];
+    sprintf(log, "VOLUME: %.2lf m^3 -> %.2lf L", cubicm, l);
+    save_history(log);
+}
+
+// Litre to Cubic Meter
+void l_to_cubicm() {
+    double l, cubicm;
+    printf("\nEnter Litre: ");
+    scanf("%lf",&l);
+
+    cubicm = l/1000;
+    printf("\n%.2lf L = %.6lf m^3\n",l,cubicm);
+
+    char log[200];
+    sprintf(log, "VOLUME: %.2lf L -> %.6lf m^3", l, cubicm);
+    save_history(log);
+}
+
+// Cubic Centimeter (cc) to Millilitre
+void cc_to_ml() {
+    double cc, ml;
+    printf("\nEnter Cubic Centimeter (cc): ");
+    scanf("%lf",&cc);
+
+    ml = cc; // 1 cc = 1 ml
+    printf("\n%.2lf cc = %.2lf mL\n",cc,ml);
+
+    char log[200];
+    sprintf(log, "VOLUME: %.2lf cc -> %.2lf mL", cc, ml);
+    save_history(log);
+}
+
+// Millilitre to Cubic Centimeter (cc)
+void ml_to_cc() {
+    double ml, cc;
+    printf("\nEnter Mili Litre: ");
+    scanf("%lf",&ml);
+
+    cc = ml; // 1 ml = 1 cc
+    printf("\n%.2lf mL = %.2lf cc\n",ml,cc);
+
+    char log[200];
+    sprintf(log, "VOLUME: %.2lf mL -> %.2lf cc", ml, cc);
+    save_history(log);
+}
+
 
 // ================= NUMBER SYSTEM CONVERSIONS =================
 
@@ -387,5 +527,170 @@ void dec_to_hex() {
 
     char log[200];
     sprintf(log, "DEC->HEX: %d -> %X", n, n);
+    save_history(log);
+}
+
+// Binary to Decimal
+void binary_to_dec() {
+    long long n;
+    printf("\nEnter Binary: ");
+    scanf("%lld",&n);
+
+    int dec = 0, base = 1, temp = n;
+    while(temp) {
+        int last_digit = temp % 10;
+        dec += last_digit * base;
+        base *= 2;
+        temp /= 10;
+    }
+
+    printf("Decimal = %d\n",dec);
+
+    char log[200];
+    sprintf(log, "BIN->DEC: %lld -> %d", n, dec);
+    save_history(log);
+}
+
+// Octal to Decimal
+void octal_to_dec() {
+    int n;
+    printf("\nEnter Octal: ");
+    scanf("%o",&n);
+
+    printf("Decimal = %d\n",n);
+
+    char log[200];
+    sprintf(log, "OCT->DEC: %o -> %d", n, n);
+    save_history(log);
+}
+
+// Hexadecimal to Decimal
+void hex_to_dec() {
+    int n;
+    printf("\nEnter Hexadecimal: ");
+    scanf("%x",&n);
+
+    printf("Decimal = %d\n",n);
+
+    char log[200];
+    sprintf(log, "HEX->DEC: %X -> %d", n, n);
+    save_history(log);
+}
+
+// Binary to Octal
+void binary_to_octal() {
+    long long n;
+    printf("\nEnter Binary: ");
+    scanf("%lld",&n);
+
+    int dec = 0, base = 1, temp = n;
+    while(temp) {
+        int last_digit = temp % 10;
+        dec += last_digit * base;
+        base *= 2;
+        temp /= 10;
+    }
+
+    printf("Octal = %o\n",dec);
+
+    char log[200];
+    sprintf(log, "BIN->OCT: %lld -> %o", n, dec);
+    save_history(log);
+}
+
+// Octal to Binary
+void octal_to_binary() {
+    int n;
+    printf("\nEnter Octal: ");
+    scanf("%o",&n);
+
+    int bin[32], i=0, original = n;
+    while(n>0){ 
+        bin[i++]=n%2; 
+        n/=2; 
+    }
+
+    printf("Binary = ");
+    char log[300];
+    sprintf(log, "OCT->BIN: %o -> ", original);
+    for(int j=i-1;j>=0;j--) {
+        printf("%d",bin[j]);
+        char t[5];
+        sprintf(t, "%d", bin[j]);
+        strcat(log, t);
+    }
+    printf("\n");
+    save_history(log);
+}
+
+// Binary to Hexadecimal
+void binary_to_hex() {
+    long long n;
+    printf("\nEnter Binary: ");
+    scanf("%lld",&n);
+
+    int dec = 0, base = 1, temp = n;
+    while(temp) {
+        int last_digit = temp % 10;
+        dec += last_digit * base;
+        base *= 2;
+        temp /= 10;
+    }
+
+    printf("Hexadecimal = %X\n",dec);
+
+    char log[200];
+    sprintf(log, "BIN->HEX: %lld -> %X", n, dec);
+    save_history(log);
+}
+
+// Hexadecimal to Binary
+void hex_to_binary() {
+    int n;
+    printf("\nEnter Hexadecimal: ");
+    scanf("%x",&n);
+
+    int bin[32], i=0, original = n;
+    while(n>0){ 
+        bin[i++]=n%2; 
+        n/=2; 
+    }
+
+    printf("Binary = ");
+    char log[300];
+    sprintf(log, "HEX->BIN: %X -> ", original);
+    for(int j=i-1;j>=0;j--) {
+        printf("%d",bin[j]);
+        char t[5];
+        sprintf(t, "%d", bin[j]);
+        strcat(log, t);
+    }
+    printf("\n");
+    save_history(log);
+}
+
+// Octal to Hexadecimal
+void octal_to_hex() {
+    int n;
+    printf("\nEnter Octal: ");
+    scanf("%o", &n);  
+    
+    printf("Hexadecimal = %X\n", n);  
+    
+    char log[200];
+    sprintf(log, "OCT->HEX: %o -> %X", n, n);
+    save_history(log);
+}
+
+// Hexadecimal to Octal
+void hex_to_octal() {
+    int n;
+    printf("\nEnter Hexadecimal: ");
+    scanf("%x", &n);  
+    
+    printf("Octal = %o\n", n);  
+    
+    char log[200];
+    sprintf(log, "HEX->OCT: %X -> %o", n, n);
     save_history(log);
 }

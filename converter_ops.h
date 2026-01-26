@@ -80,6 +80,36 @@ void l_to_ml();
 // Millilitre to Litre
 void ml_to_l();
 
+// Gallon to Litre
+void gallon_to_l();
+
+// Litre to Gallon
+void l_to_gallon();
+
+// Fluid Ounce to Millilitre
+void floz_to_ml();
+
+// Millilitre to Fluid Ounce
+void ml_to_floz();
+
+// Pint to Litre
+void pint_to_l();
+
+// Litre to Pint
+void l_to_pint();
+
+// Cubic Meter to Litre
+void cubicm_to_l();
+
+// Litre to Cubic Meter
+void l_to_cubicm();
+
+// Cubic Centimeter (cc) to Millilitre
+void cc_to_ml();
+
+// Millilitre to Cubic Centimeter (cc)
+void ml_to_cc();
+
 
 // ================= NUMBER SYSTEM CONVERSIONS =================
 
@@ -91,5 +121,32 @@ void dec_to_octal();
 
 // Decimal to Hexadecimal
 void dec_to_hex();
+
+// Binary to Decimal
+void binary_to_dec();
+
+// Octal to Decimal
+void octal_to_dec();
+
+// Hexadecimal to Decimal
+void hex_to_dec();
+
+// Binary to Octal
+void binary_to_octal();
+
+// Octal to Binary
+void octal_to_binary();
+
+// Binary to Hexadecimal
+void binary_to_hex();
+
+// Hexadecimal to Binary
+void hex_to_binary();
+
+// Octal to Hexadecimal
+void octal_to_hex();
+
+// Hexadecimal to Octal
+void hex_to_octal();
 
 #endif

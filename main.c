@@ -551,76 +551,113 @@ int main() {
 
                             // ---- Temperature Conversion ----
                             if(uop==1) {
-                                int t;
-                                printf("\n1. Celcius -> Fahrenheit\n2. Fahrenheit -> Celcius\n3. Celcius -> Kelvin\n4. Kelvin -> Celcius\n5. Fahrenheit -> Kelvin\n6. Kelvin -> Fahrenheit\n7. Back\n");
-                                printf("\nEnter Choice: ");
-                                scanf("%d",&t);
-                                if(t==1) c_to_f();     // Celsius to Fahrenheit
-                                else if(t==2) f_to_c(); // Fahrenheit to Celsius
-                                else if(t==3) c_to_k(); // Celsius to Kelvin
-                                else if(t==4) k_to_c(); // Kelvin to Celsius
-                                else if(t==5) f_to_k(); // Fahrenheit to Kelvin
-                                else if(t==6) k_to_f(); // Kelvin to Fahrenheit
-                                else if(t==7); break; // Back
+                                while(1){
+                                    int t;
+                                    printf("\n1. Celcius -> Fahrenheit\n2. Fahrenheit -> Celcius\n3. Celcius -> Kelvin\n4. Kelvin -> Celcius\n5. Fahrenheit -> Kelvin\n6. Kelvin -> Fahrenheit\n7. Back\n");
+                                    printf("\nEnter Choice: ");
+                                    scanf("%d",&t);
+                                    if(t==1) c_to_f();
+                                    else if(t==2) f_to_c();
+                                    else if(t==3) c_to_k();
+                                    else if(t==4) k_to_c();
+                                    else if(t==5) f_to_k();
+                                    else if(t==6) k_to_f();
+                                    else if(t==7) break;
+                                }
                             }
 
                             // ---- Length Conversion ----
                             if(uop==2) {
-                                int l;
-                                printf("\n1.Kilo Meter -> Meter \n2.Kilo Meter -> Centi Meter \n3.Meter -> Kilo Meter \n4.Meter -> Centi Meter \n5.Centi Meter -> Meter \n6.Inche's -> Centi Meter \n7.Centi Meter -> Inches \n8.Kilo Meter -> Miles \n9.Miles -> Kilo Meter \n10.Meter -> Foot\n11.Foot -> Meter\n12.Back\n");
-                                printf("\nEnter Choice: ");
-                                scanf("%d",&l);
-                                if(l==1) km_to_m();
-                                else if(l==2) km_to_cm();
-                                else if(l==3) m_to_km();
-                                else if(l==4) m_to_cm();
-                                else if(l==5) cm_to_m();
-                                else if(l==6) inch_to_cm();
-                                else if(l==7) cm_to_inch();
-                                else if(l==8) km_to_mile();
-                                else if(l==9) mile_to_km();
-                                else if(l==10) m_to_foot();
-                                else if(l==11) foot_to_m();
-                                else if(l==12); break;
+                                while(1){
+                                    int l;
+                                    printf("\n1.Kilo Meter -> Meter \n2.Kilo Meter -> Centi Meter \n3.Meter -> Kilo Meter \n4.Meter -> Centi Meter \n5.Centi Meter -> Meter \n6.Inche's -> Centi Meter \n7.Centi Meter -> Inches \n8.Kilo Meter -> Miles \n9.Miles -> Kilo Meter \n10.Meter -> Foot\n11.Foot -> Meter\n12.Back\n");
+                                    printf("\nEnter Choice: ");
+                                    scanf("%d",&l);
+                                    if(l==1) km_to_m();
+                                    else if(l==2) km_to_cm();
+                                    else if(l==3) m_to_km();
+                                    else if(l==4) m_to_cm();
+                                    else if(l==5) cm_to_m();
+                                    else if(l==6) inch_to_cm();
+                                    else if(l==7) cm_to_inch();
+                                    else if(l==8) km_to_mile();
+                                    else if(l==9) mile_to_km();
+                                    else if(l==10) m_to_foot();
+                                    else if(l==11) foot_to_m();
+                                    else if(l==12) break;
+                                }
                             }
 
                             // ---- Mass Conversion ----
                             if(uop==3) {
-                                int m;
-                                printf("\n1.Gram -> Kilo Gram \n2.Kilo Gram -> Gram \n3.Gram -> Pound \n4.Pound -> Gram \n5.Back\n");
-                                printf("\nEnter Choice: ");
-                                scanf("%d",&m);
-                                if(m==1) g_to_kg();
-                                else if(m==2) kg_to_g();
-                                else if(m==3) g_to_pound();
-                                else if(m==4) pound_to_g();
+                                while(1){
+                                    int m;
+                                    printf("\n1.Gram -> Kilo Gram \n2.Kilo Gram -> Gram \n3.Gram -> Pound \n4.Pound -> Gram \n5.Back\n");
+                                    printf("\nEnter Choice: ");
+                                    scanf("%d",&m);
+                                    if(m==1) g_to_kg();
+                                    else if(m==2) kg_to_g();
+                                    else if(m==3) g_to_pound();
+                                    else if(m==4) pound_to_g();
+                                    else if(m==5) break;
+                                }
                             }
 
                             // ---- Volume Conversion ----
                             if(uop==4) {
-                                int v;
-                                printf("\n1.Litre -> Mili Litre \n2.Mili Litre -> Litre \n3.Back\n");
-                                printf("\nEnter Choice: ");
-                                scanf("%d",&v);
-                                if(v==1) l_to_ml();
-                                else if(v==2) ml_to_l();
+                                while(1){
+                                    int v;
+                                    printf("\n1.Litre -> Mili Litre \n2.Mili Litre -> Litre \n3.Gallon -> Litre \n4.Litre -> Gallon \n5.Fluid Ounce -> Mili Litre \n6.Mili Litre -> Fluid Ounce \n7.Pint -> Litre \n8.Litre -> Pint \n9.Cubic Meter -> Litre \n10.Litre -> Cubic Meter \n11.Cubic Centi Meter(cc) -> Mili Litre \n12.Mili Litre -> Cubic Centi Meter(cc) \n13.Back\n");
+                                    printf("\nEnter Choice: ");
+                                    scanf("%d",&v);
+                                    if(v==1) l_to_ml();
+                                    else if(v==2) ml_to_l();
+                                    else if(v==3) gallon_to_l();
+                                    else if(v==4) l_to_gallon();
+                                    else if(v==5) floz_to_ml();
+                                    else if(v==6) ml_to_floz();
+                                    else if(v==7) pint_to_l();
+                                    else if(v==8) l_to_pint();
+                                    else if(v==9) cubicm_to_l();
+                                    else if(v==10) l_to_cubicm();
+                                    else if(v==11) cc_to_ml();
+                                    else if(v==12) ml_to_cc();
+                                    else if(v==13) break;
+                                }
                             }
-                        }
+
+                        } // unit converter while end
                     }
 
                     // ===== NUMBER SYSTEM CONVERTERS =====
                     if(cop==2) {
                         int n;
-                        printf("\n1.Decimal -> Binary \n2.Decimal -> Octal \n3.Decimal -> Hexa Decimal \n4.Back\n");
-                        printf("\nEnter Choice: ");
-                        scanf("%d",&n);
-                        if(n==1) dec_to_binary();
-                        else if(n==2) dec_to_octal();
-                        else if(n==3) dec_to_hex();
+                        while(1){
+                            printf("\n1.Decimal -> Binary \n2.Decimal -> Octal \n3.Decimal -> Hexa Decimal \n4.Binary -> Decimal \n5.Octal -> Decimal \n6.Hexa Decimal -> Decimal\n7.Binary -> Octal\n8.Octal -> Binary\n9.Binary -> Hexa Decimal\n10.Hexa Decimal -> Binary\n11.Octal -> Hexa Decimal\n12.Hexa Decimal -> Octal\n13.Back\n");
+                            printf("\nEnter Choice: ");
+                            scanf("%d",&n);
+                            if(n==1) dec_to_binary();
+                            else if(n==2) dec_to_octal();
+                            else if(n==3) dec_to_hex();
+                            else if(n==4) binary_to_dec();
+                            else if(n==5) octal_to_dec();
+                            else if(n==6) hex_to_dec();
+                            else if(n==7) binary_to_octal();
+                            else if(n==8) octal_to_binary();
+                            else if(n==9) binary_to_hex();
+                            else if(n==10) hex_to_binary();
+                            else if(n==11) octal_to_hex();
+                            else if(n==12) hex_to_octal();
+                            else if(n==13) break;
+                        }
                     }
-                }
-                break;   // Exit converter case
-            }
+
+                } // main converter while
+                break;   // VERY IMPORTANT
+            } //Case 7 Exit
+
+        
+
 
             case 8: {   // ===== REAL-WORLD UTILITIES MENU =====
                 int rop;   // Real-world tool choice
