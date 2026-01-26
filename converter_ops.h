@@ -50,6 +50,12 @@ void km_to_mile();
 // Mile to Kilometer
 void mile_to_km();
 
+// Meter to Foot
+void m_to_foot();
+
+// Foot to Meter
+void foot_to_m();
+
 
 // ================= MASS CONVERSIONS =================
 

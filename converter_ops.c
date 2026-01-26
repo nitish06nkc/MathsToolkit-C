@@ -218,6 +218,32 @@ void mile_to_km() {
     save_history(log);
 }
 
+// Meter to Foot
+void m_to_foot() {
+    double m, ft;
+    printf("\nEnter Meter: ");
+    scanf("%lf",&m);
+
+    ft = m * 3.28084;
+    printf("\n%.2lf m = %.4lf ft\n",m,ft);
+    char log[200];
+    sprintf(log, "LENGTH: %.2lf m -> %.4lf ft", m, ft);
+    save_history(log);
+}
+
+// Foot to Meter
+void foot_to_m() {
+    double ft, m;
+    printf("\nEnter Foot: ");
+    scanf("%lf",&ft);
+
+    m = ft / 3.28084;
+    printf("\n%.2lf ft = %.4lf m\n",ft,m);
+    char log[200];
+    sprintf(log, "LENGTH: %.2lf ft -> %.4lf m", ft, m);
+    save_history(log);
+}
+
 
 // ================= MASS CONVERSIONS =================
 

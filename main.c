@@ -567,7 +567,7 @@ int main() {
                             // ---- Length Conversion ----
                             if(uop==2) {
                                 int l;
-                                printf("\n1.Kilo Meter -> Meter \n2.Kilo Meter -> Centi Meter \n3.Meter -> Kilo Meter \n4.Meter -> Centi Meter \n5.Centi Meter -> Meter \n6.Inche's -> Centi Meter \n7.Centi Meter -> Inches \n8.Kilo Meter -> Miles \n9.Miles -> Kilo Meter \n10.Back\n");
+                                printf("\n1.Kilo Meter -> Meter \n2.Kilo Meter -> Centi Meter \n3.Meter -> Kilo Meter \n4.Meter -> Centi Meter \n5.Centi Meter -> Meter \n6.Inche's -> Centi Meter \n7.Centi Meter -> Inches \n8.Kilo Meter -> Miles \n9.Miles -> Kilo Meter \n10.Meter -> Foot\n11.Foot -> Meter\n12.Back\n");
                                 printf("\nEnter Choice: ");
                                 scanf("%d",&l);
                                 if(l==1) km_to_m();
@@ -579,6 +579,9 @@ int main() {
                                 else if(l==7) cm_to_inch();
                                 else if(l==8) km_to_mile();
                                 else if(l==9) mile_to_km();
+                                else if(l==10) m_to_foot();
+                                else if(l==11) foot_to_m();
+                                else if(l==12); break;
                             }
 
                             // ---- Mass Conversion ----
