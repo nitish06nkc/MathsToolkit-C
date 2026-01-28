@@ -113,17 +113,18 @@ int main() {
                     printf("\n3. Cube Root");
                     printf("\n4. Log10");
                     printf("\n5. Natural Log (ln)");
-                    printf("\n6. Modulus");
-                    printf("\n7. Trigonometry");
-                    printf("\n8. Degree & Radian Converter");
-                    printf("\n9. Quadratic Equation Root Finder");
-                    printf("\n10. Permutation & Combination");
-                    printf("\n11. Back");
+                    printf("\n6. nth Root");
+                    printf("\n7. Modulus");
+                    printf("\n8. Trigonometry");
+                    printf("\n9. Degree & Radian Converter");
+                    printf("\n10. Quadratic Equation Root Finder");
+                    printf("\n11. Permutation & Combination");
+                    printf("\n12. Back");
 
                     printf("\n\nEnter choice: ");
                     scanf("%d", &sop);
 
-                    if(sop == 11) break;   // Exit scientific menu
+                    if(sop == 12) break;   // Exit scientific menu
 
                     switch(sop) {
 
@@ -194,7 +195,23 @@ int main() {
                             break;
                         }
 
-                        case 6: {   // Modulus operation
+                        case 6: {   // nth root calculation
+                            double x, n;
+                            printf("\nEnter number: ");
+                            scanf("%lf", &x);
+                            printf("Enter root (n): ");
+                            scanf("%lf", &n);
+
+                            if(n == 0) {
+                                printf("\nRoot cannot be zero\n");
+                            } else {
+                                double result = nth_root_calc(x, n);
+                                printf("\nResult = %.4lf\n", result);
+                            }
+                            break;
+                        }
+
+                        case 7: {   // Modulus operation
                             int a, b;
                             printf("\nEnter first number: ");
                             scanf("%d", &a);
@@ -210,12 +227,12 @@ int main() {
                             break;
                         }
 
-                        case 7: {   // Trigonometry submenu
+                        case 8: {   // Trigonometry submenu
                             trig_menu();
                             break;
                         }
 
-                        case 8: {   // Degree ↔ Radian conversion
+                        case 9: {   // Degree ↔ Radian conversion
                             int ch;
                             double deg, rad;
 
@@ -248,7 +265,7 @@ int main() {
                             break;
                         }
 
-                        case 9: {   // Quadratic equation solver
+                        case 10: {   // Quadratic equation solver
                             double a, b, c;
                             printf("\nEnter a: ");
                             scanf("%lf", &a);
@@ -265,7 +282,7 @@ int main() {
                             break;
                         }
 
-                        case 10: {  // Permutation & Combination
+                        case 11: {  // Permutation & Combination
                             int ch;
                             int n, r;
 

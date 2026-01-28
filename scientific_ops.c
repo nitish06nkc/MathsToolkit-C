@@ -40,6 +40,17 @@ double cube_root(double x) {
     return result;
 }
 
+// nth root calculation
+double nth_root_calc(double x , double n) {
+    double result = pow(x, 1.0/n);
+
+    char log[200];
+    sprintf(log, "NTH ROOT: %.2lf root of %.2lf = %.2lf", n, x, result);
+    save_history(log);
+
+    return result;
+}
+
 // Log base 10
 double log10_calc(double x) {
     double result = log10(x);

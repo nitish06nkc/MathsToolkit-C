@@ -10,6 +10,9 @@ double square_root(double x);
 // Cube root of a number
 double cube_root(double x);
 
+// nth root calculation
+double nth_root_calc(double x , double n);
+
 // Logarithm base 10
 double log10_calc(double x);
 
