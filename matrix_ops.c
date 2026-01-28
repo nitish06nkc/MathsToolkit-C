@@ -155,3 +155,62 @@ void matrix_transpose() {
 
     log_matrix("TRANSPOSE", r, c);
 }
+
+// Check if matrix is Symmetric
+void symmetric_matrix() {
+    int r, c;
+    printf("\nEnter rows and columns: ");
+    scanf("%d %d", &r, &c);
+
+    if(r != c) {
+        printf("\nMatrix is not symmetric (not square)\n");
+        return;
+    }
+
+    int A[r][c];
+    printf("\nEnter Matrix:\n");
+    for(int i=0;i<r;i++)
+        for(int j=0;j<c;j++)
+            scanf("%d",&A[i][j]);
+            
+    // Check symmetry
+    for(int i=0;i<r;i++) {
+        for(int j=0;j<c;j++) {
+            if(A[i][j] != A[j][i]) {
+                printf("\nMatrix is not symmetric\n");
+                return;
+            }
+        }
+    }
+    printf("\nMatrix is symmetric\n");
+    log_matrix("SYMMETRIC CHECK", r, c);
+}
+
+// Check if matrix is Skew-Symmetric
+void skew_symmetric_matrix() {
+    int r, c;
+    printf("\nEnter rows and columns: ");
+    scanf("%d %d", &r, &c);
+
+    if(r != c) {
+        printf("\nMatrix is not skew-symmetric (not square)\n");
+        return;
+    }
+
+    int A[r][c];
+    printf("\nEnter Matrix:\n");
+    for(int i=0;i<r;i++)
+        for(int j=0;j<c;j++)
+            scanf("%d",&A[i][j]);
+    // Check skew-symmetry
+    for(int i=0;i<r;i++) {
+        for(int j=0;j<c;j++) {
+            if(A[i][j] != -A[j][i]) {
+                printf("\nMatrix is not skew-symmetric\n");
+                return;
+            }
+        }
+    }
+    printf("\nMatrix is skew-symmetric\n");
+    log_matrix("SKEW-SYMMETRIC CHECK", r, c);
+}

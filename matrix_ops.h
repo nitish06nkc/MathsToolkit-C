@@ -13,4 +13,10 @@ void matrix_multiply();
 // Matrix transpose function
 void matrix_transpose();
 
+// Check if matrix is Symmetric
+void symmetric_matrix();
+
+// Check if matrix is Skew-Symmetric
+void skew_symmetric_matrix();
+
 #endif

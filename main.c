@@ -446,24 +446,28 @@ int main() {
                     printf("\n2. Matrix Subtraction");
                     printf("\n3. Matrix Multiplication");
                     printf("\n4. Matrix Transpose");
-                    printf("\n5. Determinants(Coming Soon!!!)");
-                    printf("\n6. Back\n");
+                    printf("\n5. Symmetric Matrix Check");
+                    printf("\n6. Skew-Symmetric Matrix Check");
+                    printf("\n7. Determinants(Coming Soon!!!)");
+                    printf("\n8. Back\n");
 
                     printf("\nEnter choice: ");
                     scanf("%d",&mop);
 
-                    if(mop==5){   // Placeholder for future feature
+                    if(mop==7){   // Placeholder for future feature
                         printf("\nComing Soon!!!");
                         printf("Try Another Features in Mean Time.\n");
                         break;
                     }
-                    if(mop==6) break;   // Exit matrix menu
+                    if(mop==8) break;   // Exit matrix menu
 
                     switch(mop) {
                         case 1: matrix_add(); break;        // Matrix addition
                         case 2: matrix_subtract(); break;   // Matrix subtraction
                         case 3: matrix_multiply(); break;   // Matrix multiplication
                         case 4: matrix_transpose(); break;  // Matrix transpose
+                        case 5: symmetric_matrix(); break;    // Symmetric matrix check
+                        case 6: skew_symmetric_matrix(); break; // Skew-symmetric check
                         default: printf("\nInvalid choice\n");
                     }
                 }
