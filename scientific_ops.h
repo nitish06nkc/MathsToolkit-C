@@ -16,6 +16,9 @@ double nth_root_calc(double x , double n);
 // Logarithm base 10
 double log10_calc(double x);
 
+// Logarithm with any base
+double log_base_calc(double x , double base);
+
 // Natural logarithm (base e)
 double ln_calc(double x);
 

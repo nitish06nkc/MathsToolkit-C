@@ -62,6 +62,17 @@ double log10_calc(double x) {
     return result;
 }
 
+// Log with any base
+double log_base_calc(double x , double base) {
+    double result = log(x) / log(base);
+
+    char log[200];
+    sprintf(log, "LOG BASE: log base %.2lf of %.2lf = %.2lf", base, x, result);
+    save_history(log);
+
+    return result;
+}
+
 // Natural logarithm (base e)
 double ln_calc(double x) {
     double result = log(x);

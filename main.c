@@ -112,19 +112,20 @@ int main() {
                     printf("\n2. Square Root");
                     printf("\n3. Cube Root");
                     printf("\n4. Log10");
-                    printf("\n5. Natural Log (ln)");
-                    printf("\n6. nth Root");
-                    printf("\n7. Modulus");
-                    printf("\n8. Trigonometry");
-                    printf("\n9. Degree & Radian Converter");
-                    printf("\n10. Quadratic Equation Root Finder");
-                    printf("\n11. Permutation & Combination");
-                    printf("\n12. Back");
+                    printf("\n5. Log with any Base");
+                    printf("\n6. Natural Log (ln)");
+                    printf("\n7. nth Root");
+                    printf("\n8. Modulus");
+                    printf("\n9. Trigonometry");
+                    printf("\n10. Degree & Radian Converter");
+                    printf("\n11. Quadratic Equation Root Finder");
+                    printf("\n12. Permutation & Combination");
+                    printf("\n13. Back");
 
                     printf("\n\nEnter choice: ");
                     scanf("%d", &sop);
 
-                    if(sop == 12) break;   // Exit scientific menu
+                    if(sop == 13) break;   // Exit scientific menu
 
                     switch(sop) {
 
@@ -181,7 +182,23 @@ int main() {
                             break;
                         }
 
-                        case 5: {   // Natural logarithm
+                        case 5: {   // Log with any base
+                            double x, base;
+                            printf("\nEnter number: ");
+                            scanf("%lf", &x);
+                            printf("Enter base: ");
+                            scanf("%lf", &base);
+
+                            if(base <= 0 || base == 1 || x <= 0) {
+                                printf("\nLog undefined for x <= 0 or base <= 0 or base == 1\n");
+                            } else {
+                                double result = log_base_calc(x, base);
+                                printf("\nResult = %.4lf\n", result);
+                            }
+                            break;
+                        }
+
+                        case 6: {   // Natural logarithm
                             double x;
                             printf("\nEnter number: ");
                             scanf("%lf", &x);
@@ -195,7 +212,7 @@ int main() {
                             break;
                         }
 
-                        case 6: {   // nth root calculation
+                        case 7: {   // nth root calculation
                             double x, n;
                             printf("\nEnter number: ");
                             scanf("%lf", &x);
@@ -211,7 +228,7 @@ int main() {
                             break;
                         }
 
-                        case 7: {   // Modulus operation
+                        case 8: {   // Modulus operation
                             int a, b;
                             printf("\nEnter first number: ");
                             scanf("%d", &a);
@@ -227,12 +244,12 @@ int main() {
                             break;
                         }
 
-                        case 8: {   // Trigonometry submenu
+                        case 9: {   // Trigonometry submenu
                             trig_menu();
                             break;
                         }
 
-                        case 9: {   // Degree ↔ Radian conversion
+                        case 10: {   // Degree ↔ Radian conversion
                             int ch;
                             double deg, rad;
 
@@ -265,7 +282,7 @@ int main() {
                             break;
                         }
 
-                        case 10: {   // Quadratic equation solver
+                        case 11: {   // Quadratic equation solver
                             double a, b, c;
                             printf("\nEnter a: ");
                             scanf("%lf", &a);
@@ -282,7 +299,7 @@ int main() {
                             break;
                         }
 
-                        case 11: {  // Permutation & Combination
+                        case 12: {  // Permutation & Combination
                             int ch;
                             int n, r;
 
