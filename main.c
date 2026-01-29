@@ -673,16 +673,16 @@ int main() {
                                     printf("\nEnter Choice: ");
                                     scanf("%d",&e);
 
-                                    if(e==1) j_to_kj();
-                                    else if(e==2) kj_to_j();
-                                    else if(e==3) j_to_cal();
-                                    else if(e==4) cal_to_j();
-                                    else if(e==5) cal_to_kcal();
-                                    else if(e==6) kcal_to_cal();
-                                    else if(e==7) ev_to_j();
-                                    else if(e==8) j_to_ev();
-                                    else if(e==9) kwh_to_j();
-                                    else if(e==10) j_to_kwh();
+                                    if(e==1) joule_to_kilojoule();
+                                    else if(e==2) kilojoule_to_joule();
+                                    else if(e==3) joule_to_calorie();
+                                    else if(e==4) calorie_to_joule();
+                                    else if(e==5) calorie_to_kilocalorie();
+                                    else if(e==6) kilocalorie_to_calorie();
+                                    else if(e==7) electronvolt_to_joule();
+                                    else if(e==8) joule_to_electronvolt();
+                                    else if(e==9) joule_to_kwh();
+                                    else if(e==10) kwh_to_joule();
                                     else if(e==11) break;
                                 }
                             }

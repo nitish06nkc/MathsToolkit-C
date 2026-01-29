@@ -474,6 +474,147 @@ void ml_to_cc() {
     save_history(log);
 }
 
+// =================== ENERGY CONVERSIONS =================
+
+// Joule to Kilojoule
+void joule_to_kilojoule() {
+    double joule, kilojoule;
+    printf("\nEnter Joules: ");
+    scanf("%lf",&joule);
+
+    kilojoule = joule / 1000;
+    printf("\n%.2lf J = %.4lf kJ\n", joule, kilojoule);
+
+    char log[200];
+    sprintf(log, "ENERGY: %.2lf J -> %.4lf kJ", joule, kilojoule);
+    save_history(log);
+}
+
+// Kilojoule to Joule
+void kilojoule_to_joule() {
+    double kilojoule, joule;
+    printf("\nEnter Kilojoules: ");
+    scanf("%lf",&kilojoule);
+
+    joule = kilojoule * 1000;
+    printf("\n%.2lf kJ = %.2lf J\n", kilojoule, joule);
+
+    char log[200];
+    sprintf(log, "ENERGY: %.2lf kJ -> %.2lf J", kilojoule, joule);
+    save_history(log);
+}
+
+// Calorie to Joule
+void calorie_to_joule() {
+    double calorie, joule;
+    printf("\nEnter Calories: ");
+    scanf("%lf",&calorie);
+
+    joule = calorie * 4.184;
+    printf("\n%.2lf cal = %.4lf J\n", calorie, joule);
+
+    char log[200];
+    sprintf(log, "ENERGY: %.2lf cal -> %.4lf J", calorie, joule);
+    save_history(log);
+}
+
+// Joule to Calorie
+void joule_to_calorie() {
+    double joule, calorie;
+    printf("\nEnter Joules: ");
+    scanf("%lf",&joule);
+
+    calorie = joule / 4.184;
+    printf("\n%.2lf J = %.4lf cal\n", joule, calorie);
+
+    char log[200];
+    sprintf(log, "ENERGY: %.2lf J -> %.4lf cal", joule, calorie);
+    save_history(log);
+}
+
+// Kilocalorie to Calorie
+void kilocalorie_to_calorie() {
+    double kilocalorie, calorie;
+    printf("\nEnter Kilocalories: ");
+    scanf("%lf",&kilocalorie);
+
+    calorie = kilocalorie * 1000;
+    printf("\n%.2lf kcal = %.2lf cal\n", kilocalorie, calorie);
+
+    char log[200];
+    sprintf(log, "ENERGY: %.2lf kcal -> %.2lf cal", kilocalorie, calorie);
+    save_history(log);
+}
+
+// Calorie to Kilocalorie
+void calorie_to_kilocalorie() {
+    double calorie, kilocalorie;
+    printf("\nEnter Calories: ");
+    scanf("%lf",&calorie);
+
+    kilocalorie = calorie / 1000;
+    printf("\n%.2lf cal = %.2lf kcal\n", calorie, kilocalorie);
+
+    char log[200];
+    sprintf(log, "ENERGY: %.2lf cal -> %.2lf kcal", calorie, kilocalorie);
+    save_history(log);
+}
+
+// Electron Volt to Joule
+void electronvolt_to_joule() {
+    double ev, joule;
+    printf("\nEnter Electron Volts: ");
+    scanf("%lf",&ev);
+
+    joule = ev * 1.60218e-19;
+    printf("\n%.2lf eV = %.6e J\n", ev, joule);
+
+    char log[200];
+    sprintf(log, "ENERGY: %.2lf eV -> %.6e J", ev, joule);
+    save_history(log);
+}
+
+// Joule to Electron Volt
+void joule_to_electronvolt() {
+    double joule, ev;
+    printf("\nEnter Joules: ");
+    scanf("%lf",&joule);
+
+    ev = joule / 1.60218e-19;
+    printf("\n%.2lf J = %.2lf eV\n", joule, ev);
+
+    char log[200];
+    sprintf(log, "ENERGY: %.2lf J -> %.2lf eV", joule, ev);
+    save_history(log);
+}
+
+// Kilowatt Hour to Joule
+void kwh_to_joule() {
+    double kwh, joule;
+    printf("\nEnter Kilowatt Hours: ");
+    scanf("%lf",&kwh);
+
+    joule = kwh * 3.6e6;
+    printf("\n%.2lf kWh = %.2lf J\n", kwh, joule);
+
+    char log[200];
+    sprintf(log, "ENERGY: %.2lf kWh -> %.2lf J", kwh, joule);
+    save_history(log);
+}
+
+// Joule to Kilowatt Hour
+void joule_to_kwh() {
+    double joule, kwh;
+    printf("\nEnter Joules: ");
+    scanf("%lf",&joule);
+
+    kwh = joule / 3.6e6;
+    printf("\n%.2lf J = %.6lf kWh\n", joule, kwh);
+
+    char log[200];
+    sprintf(log, "ENERGY: %.2lf J -> %.6lf kWh", joule, kwh);
+    save_history(log);
+}
 
 // ================= NUMBER SYSTEM CONVERSIONS =================
 

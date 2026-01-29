@@ -110,6 +110,37 @@ void cc_to_ml();
 // Millilitre to Cubic Centimeter (cc)
 void ml_to_cc();
 
+// ================= ENERGY CONVERSIONS =================
+
+// Joule to Kilojoule
+void joule_to_kilojoule();
+
+// Kilojoule to Joule
+void kilojoule_to_joule();
+
+// Calorie to Joule
+void calorie_to_joule();
+
+// Joule to Calorie
+void joule_to_calorie();
+
+// Kilocalorie to Calorie
+void kilocalorie_to_calorie();
+
+// Calorie to Kilocalorie
+void calorie_to_kilocalorie();
+
+// Electron Volt to Joule
+void electronvolt_to_joule();
+
+// Joule to Electron Volt
+void joule_to_electronvolt();
+
+// Joule to Kilowatt Hour
+void joule_to_kwh();
+
+// Kilowatt Hour to Joule
+void kwh_to_joule();
 
 // ================= NUMBER SYSTEM CONVERSIONS =================
 
