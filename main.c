@@ -582,12 +582,17 @@ int main() {
                             printf("\n3. Mass");
                             printf("\n4. Volume");
                             printf("\n5. Energy");
-                            printf("\n6. Back\n");
+                            printf("\n6. Speed");
+                            printf("\n7. Data Storage");
+                            printf("\n8. Time");
+                            printf("\n9. Percentage & Fractions");
+                            printf("\n10. Pressure");
+                            printf("\n11. Back\n");
 
                             printf("\nEnter Choice: ");
                             scanf("%d",&uop);
-                            if(uop==6) break;   // Exit unit converter menu
 
+                            if(uop==11) break;   // Exit unit converter menu
                             // ---- Temperature Conversion ----
                             if(uop==1) {
                                 while(1){
@@ -684,6 +689,28 @@ int main() {
                                     else if(e==9) joule_to_kwh();
                                     else if(e==10) kwh_to_joule();
                                     else if(e==11) break;
+                                }
+                            }
+
+                            // ---- Speed Conversion ----
+                            if(uop==6) {
+                                while(1){
+                                    int s;
+                                    printf("\n1.Meter/Second -> Kilometer/Hour \n2.Kilometer /Hour -> Meter/Second \n3.Mile/Hour -> Kilometer/Hour \n4.Kilometer/Hour -> Mile/Hour \n5.Knot -> Kilometer/Hour \n6.Kilometer/Hour -> Knot \n7.Mach -> Kilometer/Hour \n8.Kilometer/Hour -> Mach \n9.Meter/Second -> Mile/Hour \n10.Mile/Hour -> Meter/Second \n11.Back\n");
+                                    printf("\nEnter Choice: ");
+                                    scanf("%d",&s);
+
+                                    if(s==1) mps_to_kmph();
+                                    else if(s==2) kmph_to_mps();
+                                    else if(s==3) mph_to_kmph();
+                                    else if(s==4) kmph_to_mph();
+                                    else if(s==5) knot_to_kmph();
+                                    else if(s==6) kmph_to_knot();
+                                    else if(s==7) mach_to_kmph();
+                                    else if(s==8) kmph_to_mach();
+                                    else if(s==9) mps_to_mph();
+                                    else if(s==10) mph_to_mps();
+                                    else if(s==11) break;
                                 }
                             }
 

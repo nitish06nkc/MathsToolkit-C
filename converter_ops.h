@@ -142,6 +142,38 @@ void joule_to_kwh();
 // Kilowatt Hour to Joule
 void kwh_to_joule();
 
+// ================== Speed CONVERSIONS ==================
+
+// Km/h to m/s
+void kmph_to_mps();
+
+// m/s to Km/h
+void mps_to_kmph();
+
+// Mile/Hour to Kilometer/Hour
+void mph_to_kmph();
+
+// Kilometer/Hour to Mile/Hour
+void kmph_to_mph();
+
+// knot to Kilometer/Hour
+void knot_to_kmph();
+
+// Kilometer/Hour to knot
+void kmph_to_knot();
+
+// Mach to Kilometer/Hour
+void mach_to_kmph();
+
+// Kilometer/Hour to Mach
+void kmph_to_mach();
+
+// m/s to Mile/Hour
+void mps_to_mph();
+
+// Mile/Hour to m/s
+void mph_to_mps();
+
 // ================= NUMBER SYSTEM CONVERSIONS =================
 
 // Decimal to Binary

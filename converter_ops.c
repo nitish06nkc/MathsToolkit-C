@@ -616,6 +616,148 @@ void joule_to_kwh() {
     save_history(log);
 }
 
+// ================= Speed Conversion =================
+
+// Meter/Second to Kilometer/Hour
+void mps_to_kmph() {
+    double mps, kmph;
+    printf("\nEnter Meter/Second: ");
+    scanf("%lf",&mps);
+
+    kmph = mps * 3.6;
+    printf("\n%.2lf m/s = %.2lf km/h\n", mps, kmph);
+
+    char log[200];
+    sprintf(log, "SPEED: %.2lf m/s -> %.2lf km/h", mps, kmph);
+    save_history(log);
+}
+
+// Kilometer/Hour to Meter/Second
+void kmph_to_mps() {
+    double kmph, mps;
+    printf("\nEnter Kilometer/Hour: ");
+    scanf("%lf",&kmph);
+
+    mps = kmph / 3.6;
+    printf("\n%.2lf km/h = %.4lf m/s\n", kmph, mps);
+
+    char log[200];
+    sprintf(log, "SPEED: %.2lf km/h -> %.4lf m/s", kmph, mps);
+    save_history(log);
+}
+
+// Miles/Hour to Kilometer/Hour
+void mph_to_kmph() {
+    double mph, kmph;
+    printf("\nEnter Miles/Hour: ");
+    scanf("%lf",&mph);
+
+    kmph = mph * 1.60934;
+    printf("\n%.2lf mph = %.2lf km/h\n", mph, kmph);
+
+    char log[200];
+    sprintf(log, "SPEED: %.2lf mph -> %.2lf km/h", mph, kmph);
+    save_history(log);
+}
+
+// Kilometer/Hour to Miles/Hour
+void kmph_to_mph() {
+    double kmph, mph;
+    printf("\nEnter Kilometer/Hour: ");
+    scanf("%lf",&kmph);
+
+    mph = kmph / 1.60934;
+    printf("\n%.2lf km/h = %.4lf mph\n", kmph, mph);
+
+    char log[200];
+    sprintf(log, "SPEED: %.2lf km/h -> %.4lf mph", kmph, mph);
+    save_history(log);
+}
+
+// Knot to Kilometer/Hour
+void knot_to_kmph() {
+    double knot, kmph;
+    printf("\nEnter Knot: ");
+    scanf("%lf",&knot);
+
+    kmph = knot * 1.852;
+    printf("\n%.2lf knot = %.2lf km/h\n", knot, kmph);
+
+    char log[200];
+    sprintf(log, "SPEED: %.2lf knot -> %.2lf km/h", knot, kmph);
+    save_history(log);
+}
+
+// Kilometer/Hour to Knot
+void kmph_to_knot() {
+    double kmph, knot;
+    printf("\nEnter Kilometer/Hour: ");
+    scanf("%lf",&kmph);
+
+    knot = kmph / 1.852;
+    printf("\n%.2lf km/h = %.4lf knot\n", kmph, knot);
+
+    char log[200];
+    sprintf(log, "SPEED: %.2lf km/h -> %.4lf knot", kmph, knot);
+    save_history(log);
+}
+
+// Mach to Kilometer/Hour
+void mach_to_kmph() {
+    double mach, kmph;
+    printf("\nEnter Mach: ");
+    scanf("%lf",&mach);
+
+    kmph = mach * 1234.8;
+    printf("\n%.2lf mach = %.2lf km/h\n", mach, kmph);
+
+    char log[200];
+    sprintf(log, "SPEED: %.2lf mach -> %.2lf km/h", mach, kmph);
+    save_history(log);
+}
+
+// Kilometer/Hour to Mach
+void kmph_to_mach() {
+    double kmph, mach;
+    printf("\nEnter Kilometer/Hour: ");
+    scanf("%lf",&kmph);
+
+    mach = kmph / 1234.8;
+    printf("\n%.2lf km/h = %.6lf mach\n", kmph, mach);
+
+    char log[200];
+    sprintf(log, "SPEED: %.2lf km/h -> %.6lf mach", kmph, mach);
+    save_history(log);
+}
+
+// Meter/Second to Miles/Hour
+void mps_to_mph() {
+    double mps, mph;
+    printf("\nEnter Meter/Second: ");
+    scanf("%lf",&mps);
+
+    mph = mps * 2.23694;
+    printf("\n%.2lf m/s = %.2lf mph\n", mps, mph);
+
+    char log[200];
+    sprintf(log, "SPEED: %.2lf m/s -> %.2lf mph", mps, mph);
+    save_history(log);
+}
+
+// Miles/Hour to Meter/Second
+void mph_to_mps() {
+    double mph, mps;
+    printf("\nEnter Miles/Hour: ");
+    scanf("%lf",&mph);
+
+    mps = mph / 2.23694;
+    printf("\n%.2lf mph = %.4lf m/s\n", mph, mps);
+
+    char log[200];
+    sprintf(log, "SPEED: %.2lf mph -> %.4lf m/s", mph, mps);
+    save_history(log);
+}
+
 // ================= NUMBER SYSTEM CONVERSIONS =================
 
 // Decimal to Binary
