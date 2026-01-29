@@ -9,7 +9,7 @@ Interested in Cybersecurity, Cloud Computing, and DevOps
 
 ## 🧠 What is This Project?
 
-**Menu Based Maths Toolkit** is a comprehensive command-line based software developed in the C programming language.  
+**Menu Based Maths Toolkit** is a comprehensive command-line (**CLI**) based software developed in the C programming language.  
 It provides a single platform to perform various mathematical calculations, conversions, real-world utilities, and pattern generation using a user-friendly menu-driven interface.
 
 ---
@@ -56,7 +56,7 @@ Power, Square Root, Cube Root, Logarithms, Trigonometry, Degree-Radian conversio
 Prime number check, Fibonacci series, Factorial, Armstrong number, Palindrome check, GCD & LCM, digit operations.
 
 ### 🧮 Matrix Operations  
-Matrix addition, subtraction, multiplication, and transpose.
+Matrix addition, subtraction, multiplication, transpose and symmetric + skew symmetric matrices checking feature.
 
 ### 📊 Statistics Tools  
 Mean, Median, and Mode calculations.
@@ -65,7 +65,7 @@ Mean, Median, and Mode calculations.
 Simple Interest, Compound Interest, and Currency Exchange calculator.
 
 ### 🔄 Converters  
-Unit converters for temperature, length, mass, volume, and number system conversions.
+Unit converters for temperature, length, mass, volume, energy and number system conversions.
 
 ### 🌍 Real World Utilities  
 BMI calculator, percentage calculator, leap year checker, and ASCII value finder.
