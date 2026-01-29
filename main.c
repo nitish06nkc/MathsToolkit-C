@@ -581,11 +581,12 @@ int main() {
                             printf("\n2. Length");
                             printf("\n3. Mass");
                             printf("\n4. Volume");
-                            printf("\n5. Back\n");
+                            printf("\n5. Energy");
+                            printf("\n6. Back\n");
 
                             printf("\nEnter Choice: ");
                             scanf("%d",&uop);
-                            if(uop==5) break;   // Exit unit converter menu
+                            if(uop==6) break;   // Exit unit converter menu
 
                             // ---- Temperature Conversion ----
                             if(uop==1) {
@@ -663,6 +664,29 @@ int main() {
                                     else if(v==13) break;
                                 }
                             }
+
+                            // ---- Energy Conversion ----
+                            if(uop==5) {
+                                while(1){
+                                    int e;
+                                    printf("\n1.Joule -> Kilo Joule \n2.Kilo Joule -> Joule \n3.Joule -> Calorie \n4.Calorie -> Joule \n5.Calorie -> Kilo Calorie \n6.Kilo Calorie -> Calorie \n7.Electron Volt -> Joule \n8.Joule -> Electron Volt \n9.Joule -> Kilowatt Hour \n10.Kilowatt Hour -> Joule \n11.Back\n");
+                                    printf("\nEnter Choice: ");
+                                    scanf("%d",&e);
+
+                                    if(e==1) j_to_kj();
+                                    else if(e==2) kj_to_j();
+                                    else if(e==3) j_to_cal();
+                                    else if(e==4) cal_to_j();
+                                    else if(e==5) cal_to_kcal();
+                                    else if(e==6) kcal_to_cal();
+                                    else if(e==7) ev_to_j();
+                                    else if(e==8) j_to_ev();
+                                    else if(e==9) kwh_to_j();
+                                    else if(e==10) j_to_kwh();
+                                    else if(e==11) break;
+                                }
+                            }
+
 
                         } // unit converter while end
                     }
