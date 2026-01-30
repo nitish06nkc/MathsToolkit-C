@@ -174,6 +174,44 @@ void mps_to_mph();
 // Mile/Hour to m/s
 void mph_to_mps();
 
+// ================= Time CONVERSIONS =================
+
+// seconds to minutes
+void sec_to_min();
+
+// minutes to seconds
+void min_to_sec();
+
+// minutes to hours
+void min_to_hr();
+
+// hours to minutes
+void hr_to_min();
+
+// hours to days
+void hr_to_day();
+
+// days to hours
+void day_to_hr();
+
+// days to weeks
+void day_to_week();
+
+// weeks to days
+void week_to_day();
+
+// weeks to months
+void week_to_month();
+
+// months to weeks
+void month_to_week();
+
+// months to years
+void month_to_year();
+
+// years to months
+void year_to_month();
+
 // ================= NUMBER SYSTEM CONVERSIONS =================
 
 // Decimal to Binary
