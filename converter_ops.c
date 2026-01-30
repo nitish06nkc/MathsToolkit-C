@@ -758,6 +758,176 @@ void mph_to_mps() {
     save_history(log);
 }
 
+// ================= TIME CONVERSIONS =================
+
+// Seconds to Minutes
+void sec_to_min() {
+    double sec, min;
+    printf("\nEnter Seconds: ");
+    scanf("%lf",&sec);
+
+    min = sec / 60;
+    printf("\n%.2lf sec = %.4lf min\n", sec, min);
+
+    char log[200];
+    sprintf(log, "TIME: %.2lf sec -> %.4lf min", sec, min);
+    save_history(log);
+}
+
+// Minutes to Seconds
+void min_to_sec() {
+    double min, sec;
+    printf("\nEnter Minutes: ");
+    scanf("%lf",&min);
+
+    sec = min * 60;
+    printf("\n%.2lf min = %.2lf sec\n", min, sec);
+    
+    char log[200];
+    sprintf(log, "TIME: %.2lf min -> %.2lf sec", min, sec);
+    save_history(log);
+}
+
+// Minutes to Hours
+void min_to_hr() {
+    double min, hr;
+    printf("\nEnter Minutes: ");
+    scanf("%lf",&min);
+
+    hr = min / 60;
+    printf("\n%.2lf min = %.4lf hr\n", min, hr);
+
+    char log[200];
+    sprintf(log, "TIME: %.2lf min -> %.4lf hr", min, hr);
+    save_history(log);
+}
+
+// Hours to Minutes
+void hr_to_min() {
+    double hr, min;
+    printf("\nEnter Hours: ");
+    scanf("%lf",&hr);
+
+    min = hr * 60;
+    printf("\n%.2lf hr = %.2lf min\n", hr, min);
+
+    char log[200];
+    sprintf(log, "TIME: %.2lf hr -> %.2lf min", hr, min);
+    save_history(log);
+}
+
+// Hours to Days
+void hr_to_day() {
+    double hr, day;
+    printf("\nEnter Hours: ");
+    scanf("%lf",&hr);
+
+    day = hr / 24;
+    printf("\n%.2lf hr = %.4lf day\n", hr, day);
+
+    char log[200];
+    sprintf(log, "TIME: %.2lf hr -> %.4lf day", hr, day);
+    save_history(log);
+}
+
+// Days to Hours
+void day_to_hr() {
+    double day, hr;
+    printf("\nEnter Days: ");
+    scanf("%lf",&day);
+
+    hr = day * 24;
+    printf("\n%.2lf day = %.2lf hr\n", day, hr);
+
+    char log[200];
+    sprintf(log, "TIME: %.2lf day -> %.2lf hr", day, hr);
+    save_history(log);
+}
+
+// Days to Weeks
+void day_to_week() {
+    double day, week;
+    printf("\nEnter Days: ");
+    scanf("%lf",&day);
+
+    week = day / 7;
+    printf("\n%.2lf day = %.4lf week\n", day, week);
+
+    char log[200];
+    sprintf(log, "TIME: %.2lf day -> %.4lf week", day, week);
+    save_history(log);
+}
+
+// Weeks to Days
+void week_to_day() {
+    double week, day;
+    printf("\nEnter Weeks: ");
+    scanf("%lf",&week);
+
+    day = week * 7;
+    printf("\n%.2lf week = %.2lf day\n", week, day);
+
+    char log[200];
+    sprintf(log, "TIME: %.2lf week -> %.2lf day", week, day);
+    save_history(log);
+}
+
+// Weeks to Months
+void week_to_month() {
+    double week, month;
+    printf("\nEnter Weeks: ");
+    scanf("%lf",&week);
+
+    month = week / 4.34524;
+    printf("\n%.2lf week = %.4lf month\n", week, month);
+
+    char log[200];
+    sprintf(log, "TIME: %.2lf week -> %.4lf month", week, month);
+    save_history(log);
+}
+
+// Months to Weeks
+void month_to_week() {
+    double month, week;
+    printf("\nEnter Months: ");
+    scanf("%lf",&month);
+
+    week = month * 4.34524;
+    printf("\n%.2lf month = %.2lf week\n", month, week);
+
+    char log[200];
+    sprintf(log, "TIME: %.2lf month -> %.2lf week", month, week);
+    save_history(log);
+}
+
+// Months to Years
+void month_to_year() {
+    double month, year;
+    printf("\nEnter Months: ");
+    scanf("%lf",&month);
+
+    year = month / 12;
+    printf("\n%.2lf month = %.4lf year\n", month, year);
+
+    char log[200];
+    sprintf(log, "TIME: %.2lf month -> %.4lf year", month, year);
+    save_history(log);
+}
+
+// Years to Months
+void year_to_month() {
+    double year, month;
+    printf("\nEnter Years: ");
+    scanf("%lf",&year);
+
+    month = year * 12;
+    printf("\n%.2lf year = %.2lf month\n", year, month);
+
+    char log[200];
+    sprintf(log, "TIME: %.2lf year -> %.2lf month", year, month);
+    save_history(log);
+}
+
 // ================= NUMBER SYSTEM CONVERSIONS =================
 
 // Decimal to Binary
