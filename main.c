@@ -583,8 +583,8 @@ int main() {
                             printf("\n4. Volume");
                             printf("\n5. Energy");
                             printf("\n6. Speed");
-                            printf("\n7. Data Storage");
-                            printf("\n8. Time");
+                            printf("\n7. Time");
+                            printf("\n8. Data Storage");
                             printf("\n9. Percentage & Fractions");
                             printf("\n10. Pressure");
                             printf("\n11. Back\n");
@@ -714,6 +714,29 @@ int main() {
                                 }
                             }
 
+                            // ---- Time Conversion ----
+                            if(uop==7) {
+                                while(1){
+                                    int d;
+                                    printf("\n1.Seconds -> Minutes \n2.Minutes -> Seconds \n3.Minutes -> Hours \n4.Hours -> Minutes \n5.Hours -> Days \n6.Days -> Hours \n7.Days -> Weeks \n8.Weeks -> Days \n9.Weeks -> Months \n10.Months -> Weeks \n11.Months -> Years \n12.Years -> Months \n13.Back\n");
+                                    printf("\nEnter Choice: ");
+                                    scanf("%d",&d);
+
+                                    if(d==1) sec_to_min();
+                                    else if(d==2) min_to_sec();
+                                    else if(d==3) min_to_hr();
+                                    else if(d==4) hr_to_min();
+                                    else if(d==5) hr_to_day();
+                                    else if(d==6) day_to_hr();
+                                    else if(d==7) day_to_week();
+                                    else if(d==8) week_to_day();
+                                    else if(d==9) week_to_month();
+                                    else if(d==10) month_to_week();
+                                    else if(d==11) month_to_year();
+                                    else if(d==12) year_to_month();
+                                    else if(d==13) break;
+                                }
+                            }
 
                         } // unit converter while end
                     }
