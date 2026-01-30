@@ -65,7 +65,7 @@ Mean, Median, and Mode calculations.
 Simple Interest, Compound Interest, and Currency Exchange calculator.
 
 ### 🔄 Converters  
-Unit converters for temperature, length, mass, volume, energy, speed and number system conversions.
+Unit converters for temperature, length, mass, volume, energy, speed, time and number system conversions.
 
 ### 🌍 Real World Utilities  
 BMI calculator, percentage calculator, leap year checker, and ASCII value finder.
