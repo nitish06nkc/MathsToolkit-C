@@ -10,6 +10,7 @@ Description    : A menu-driven toolkit including calculator,
 Date           : 25-01-2026
 =========================================================
 */
+
 // Standard library imports
 #include <stdio.h>
 #include <string.h>
@@ -585,14 +586,15 @@ int main() {
                             printf("\n6. Speed");
                             printf("\n7. Time");
                             printf("\n8. Data Storage");
-                            printf("\n9. Percentage & Fractions");
+                            printf("\n9. Area");
                             printf("\n10. Pressure");
-                            printf("\n11. Back\n");
+                            printf("\n11. Power");
+                            printf("\n12. Back\n");
 
                             printf("\nEnter Choice: ");
                             scanf("%d",&uop);
 
-                            if(uop==11) break;   // Exit unit converter menu
+                            if(uop==12) break;   // Exit unit converter menu
                             // ---- Temperature Conversion ----
                             if(uop==1) {
                                 while(1){
@@ -738,6 +740,84 @@ int main() {
                                 }
                             }
 
+                            // ---- Data Storage Conversion ----
+                            if(uop==8) {
+                                while(1){
+                                    int ds;
+                                    printf("\n1.Decimal Data Size Converter(1 KB = 1000 Bytes) \n2.Binary Data Size Converter(1 KiB = 1024 Bytes) \n3.Back\n");
+                                    printf("\nEnter Choice: ");
+                                    scanf("%d",&ds);
+
+                                    if(ds==1) decimal_data_size_converter();
+                                    else if(ds==2) binary_data_size_converter();
+                                    else if(ds==3) break;
+                                }
+                            }
+
+                            // ---- Area Conversion ----
+                            if(uop==9) {
+                                while(1){
+                                    int a;
+                                    printf("\n1.Metric Area Converter \n2.Imperial Area Converter \n3.Global Area Converter \n4.Back\n");
+                                    printf("\nEnter Choice: ");
+                                    scanf("%d",&a);
+
+                                    if(a==1) metric_area_converter();
+                                    else if(a==2) imperial_area_converter();
+                                    else if(a==3) global_area_converter();
+                                    else if(a==4) break;
+                                }
+                            }
+
+                            // ---- Pressure Conversion ----
+                            if(uop==10) {
+                                while(1){
+                                    int p;
+                                    printf("\n1.Pascal -> Kilo Pascal \n2.Kilo Pascal -> Pascal \n3.Kilo Pascal -> Mega Pascal \n4. Mega Pascal -> Kilo Pascal \n5.Kilo Pascal -> Bar \n6.Bar -> Kilo Pascal \n7.Bar -> Atmosphere \n8.Atmosphere -> Bar \n9.Atmosphere -> Millimeter of Mercury(mmhg) \n10.Millimeter of Mercury(mmhg) -> Atmosphere \n11.PSI -> Kilo Pascal \n12.Kilo Pascal -> PSI \n13.PSI -> Bar \n14.Bar -> PSI \n15.Back\n");
+                                    printf("\nEnter Choice: ");
+                                    scanf("%d",&p);
+
+                                    if(p==1) pascal_to_kilopascal();
+                                    else if(p==2) kilopascal_to_pascal();
+                                    else if(p==3) kilopascal_to_megapascal();
+                                    else if(p==4) megapascal_to_kilopascal();
+                                    else if(p==5) kilopascal_to_bar();
+                                    else if(p==6) bar_to_kilopascal();
+                                    else if(p==7) bar_to_atmosphere();
+                                    else if(p==8) atmosphere_to_bar();
+                                    else if(p==9) atmosphere_to_mmhg();
+                                    else if(p==10) mmhg_to_atmosphere();
+                                    else if(p==11) psi_to_kilopascal();
+                                    else if(p==12) kilopascal_to_psi();
+                                    else if(p==13) psi_to_bar();
+                                    else if(p==14) bar_to_psi();
+                                    else if(p==15) break;
+                                }
+                            }
+
+                            // ---- Power Conversion ----
+                            if(uop==11) {
+                                while(1){
+                                    int pw;
+                                    printf("\n1.Watt -> Kilo Watt \n2.Kilo Watt -> Watt \n3.Kilo Watt -> Mega Watt \n4.Mega Watt -> Kilo Watt \n5.Mega Watt -> Giga Watt \n6.Giga Watt -> Mega Watt \n7.Kilo Watt -> Horse Power \n8.Horse Power -> Kilo Watt \n9.Watt -> Horse Power \n10.Horse Power -> Watt \n11.Watt -> BTU/Hour \n12.BTU/Hour -> Watt \n13.Back\n");
+                                    printf("\nEnter Choice: ");
+                                    scanf("%d",&pw);
+
+                                    if(pw==1) watt_to_kwatt();
+                                    else if(pw==2) kwatt_to_watt();
+                                    else if(pw==3) kwatt_to_mwatt();
+                                    else if(pw==4) mwatt_to_kwatt();
+                                    else if(pw==5) mwatt_to_gwatt();
+                                    else if(pw==6) gwatt_to_mwatt();
+                                    else if(pw==7) kwatt_to_hp();
+                                    else if(pw==8) hp_to_kwatt();
+                                    else if(pw==9) watt_to_hp();
+                                    else if(pw==10) hp_to_watt();
+                                    else if(pw==11) watt_to_btu_per_hour();
+                                    else if(pw==12) btu_per_hour_to_watt();
+                                    else if(pw==13) break;
+                                }
+                            }
                         } // unit converter while end
                     }
 

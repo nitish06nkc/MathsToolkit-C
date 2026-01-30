@@ -928,6 +928,910 @@ void year_to_month() {
     save_history(log);
 }
 
+// ================= Data Storage Conversions =================
+
+// decimal data size conversions
+void decimal_data_size_converter() {
+    while(1) {
+        printf("\n----- Decimal Data Size Conversions -----\n");
+        printf("\n1. Bits -> Bytes");
+        printf("\n2. Bytes -> Bits");
+        printf("\n3. Bytes -> Kilobytes");
+        printf("\n4. Kilobytes -> Bytes");
+        printf("\n5. Kilobytes -> Megabytes");
+        printf("\n6. Megabytes -> Kilobytes");
+        printf("\n7. Megabytes -> Gigabytes");
+        printf("\n8. Gigabytes -> Megabytes");
+        printf("\n9. Gigabytes -> Terabytes");
+        printf("\n10. Terabytes -> Gigabytes");
+        printf("\n11. Terabytes -> Petabytes");
+        printf("\n12. Petabytes -> Terabytes");
+        printf("\n13. Petabytes -> Exabytes");
+        printf("\n14. Exabytes -> Petabytes");
+        printf("\n15. Exabytes -> Zettabytes");
+        printf("\n16. Zettabytes -> Exabytes");
+        printf("\n17. Zettabytes -> Yottabytes");
+        printf("\n18. Yottabytes -> Zettabytes");
+        printf("\n19. Back to Main Menu\n");
+        printf("\nChoose an option: ");
+
+        int choice;
+        scanf("%d", &choice);
+
+        if (choice == 19) {
+            break;
+        }
+        char log[200];
+        switch (choice) {
+            case 1:
+                int bits;
+                printf("\nEnter Bits: ");
+                scanf("%d", &bits);
+                printf("\n%.2d Bits = %.2lf Bytes\n", bits, bits / 8.0);
+                sprintf(log, "DATA SIZE: %d Bits -> %.2lf Bytes", bits, bits / 8.0);
+                save_history(log);
+                break;
+            case 2:
+                double bytes;
+                printf("\nEnter Bytes: ");
+                scanf("%lf", &bytes);
+                printf("\n%.2lf Bytes = %.2lf Bits\n", bytes, bytes * 8);
+                sprintf(log, "DATA SIZE: %.2lf Bytes -> %.2lf Bits", bytes, bytes * 8);
+                save_history(log);
+                break;
+            case 3:
+                printf("\nEnter Bytes: ");
+                scanf("%lf", &bytes);
+                printf("\n%.2lf Bytes = %.6lf Kilobytes\n", bytes, bytes / 1000);
+                sprintf(log, "DATA SIZE: %.2lf Bytes -> %.6lf Kilobytes", bytes, bytes / 1000);
+                save_history(log);
+                break;
+            case 4:
+                double kilobytes;
+                printf("\nEnter Kilobytes: ");
+                scanf("%lf", &kilobytes);
+                printf("\n%.2lf Kilobytes = %.2lf Bytes\n", kilobytes, kilobytes * 1000);
+                sprintf(log, "DATA SIZE: %.2lf Kilobytes -> %.2lf Bytes", kilobytes, kilobytes * 1000);
+                save_history(log);
+                break;
+            case 5:
+                printf("\nEnter Kilobytes: ");
+                scanf("%lf", &kilobytes);
+                printf("\n%.2lf Kilobytes = %.6lf Megabytes\n", kilobytes, kilobytes / 1000);
+                sprintf(log, "DATA SIZE: %.2lf Kilobytes -> %.6lf Megabytes", kilobytes, kilobytes / 1000);
+                save_history(log);
+                break;
+            case 6:
+                double megabytes;
+                printf("\nEnter Megabytes: ");
+                scanf("%lf", &megabytes);
+                printf("\n%.2lf Megabytes = %.2lf Kilobytes\n", megabytes, megabytes * 1000);
+                sprintf(log, "DATA SIZE: %.2lf Megabytes -> %.2lf Kilobytes", megabytes, megabytes * 1000);
+                save_history(log);
+                break;
+            case 7:
+                printf("\nEnter Megabytes: ");
+                scanf("%lf", &megabytes);
+                printf("\n%.2lf Megabytes = %.6lf Gigabytes\n", megabytes, megabytes / 1000);
+                sprintf(log, "DATA SIZE: %.2lf Megabytes -> %.6lf Gigabytes", megabytes, megabytes / 1000);
+                save_history(log);
+                break;
+            case 8:
+                double gigabytes;
+                printf("\nEnter Gigabytes: ");
+                scanf("%lf", &gigabytes);
+                printf("\n%.2lf Gigabytes = %.2lf Megabytes\n", gigabytes, gigabytes * 1000);
+                sprintf(log, "DATA SIZE: %.2lf Gigabytes -> %.2lf Megabytes", gigabytes, gigabytes * 1000);
+                save_history(log);
+                break;
+            case 9:
+                printf("\nEnter Gigabytes: ");
+                scanf("%lf", &gigabytes);
+                printf("\n%.2lf Gigabytes = %.6lf Terabytes\n", gigabytes, gigabytes / 1000);
+                sprintf(log, "DATA SIZE: %.2lf Gigabytes -> %.6lf Terabytes", gigabytes, gigabytes / 1000);
+                save_history(log);
+                break;
+            case 10:
+                double terabytes;
+                printf("\nEnter Terabytes: ");
+                scanf("%lf", &terabytes);
+                printf("\n%.2lf Terabytes = %.2lf Gigabytes\n", terabytes, terabytes * 1000);
+                sprintf(log, "DATA SIZE: %.2lf Terabytes -> %.2lf Gigabytes", terabytes, terabytes * 1000);
+                save_history(log);
+                break;
+            case 11:
+                printf("\nEnter Terabytes: ");
+                scanf("%lf", &terabytes);
+                printf("\n%.2lf Terabytes = %.6lf Petabytes\n", terabytes, terabytes / 1000);
+                sprintf(log, "DATA SIZE: %.2lf Terabytes -> %.6lf Petabytes", terabytes, terabytes / 1000);
+                save_history(log);
+                break;
+            case 12:
+                double petabytes;
+                printf("\nEnter Petabytes: ");
+                scanf("%lf", &petabytes);
+                printf("\n%.2lf Petabytes = %.2lf Terabytes\n", petabytes, petabytes * 1000);
+                sprintf(log, "DATA SIZE: %.2lf Petabytes -> %.2lf Terabytes", petabytes, petabytes * 1000);
+                save_history(log);
+                break;
+            case 13:
+                printf("\nEnter Petabytes: ");
+                scanf("%lf", &petabytes);
+                printf("\n%.2lf Petabytes = %.6lf Exabytes\n", petabytes, petabytes / 1000);
+                sprintf(log, "DATA SIZE: %.2lf Petabytes -> %.6lf Exabytes", petabytes, petabytes / 1000);
+                save_history(log);
+                break;
+            case 14:
+                double exabytes;
+                printf("\nEnter Exabytes: ");
+                scanf("%lf", &exabytes);
+                printf("\n%.2lf Exabytes = %.2lf Petabytes\n", exabytes, exabytes * 1000);
+                sprintf(log, "DATA SIZE: %.2lf Exabytes -> %.2lf Petabytes", exabytes, exabytes * 1000);
+                save_history(log);
+                break;
+            case 15:
+                printf("\nEnter Exabytes: ");
+                scanf("%lf", &exabytes);
+                printf("\n%.2lf Exabytes = %.6lf Zettabytes\n", exabytes, exabytes / 1000);
+                sprintf(log, "DATA SIZE: %.2lf Exabytes -> %.6lf Zettabytes", exabytes, exabytes / 1000);
+                save_history(log);
+                break;
+            case 16:
+                double zettabytes;
+                printf("\nEnter Zettabytes: ");
+                scanf("%lf", &zettabytes);
+                printf("\n%.2lf Zettabytes = %.2lf Exabytes\n", zettabytes, zettabytes * 1000);
+                sprintf(log, "DATA SIZE: %.2lf Zettabytes -> %.2lf Exabytes", zettabytes, zettabytes * 1000);
+                save_history(log);
+                break;
+            case 17:
+                printf("\nEnter Zettabytes: ");
+                scanf("%lf", &zettabytes);
+                printf("\n%.2lf Zettabytes = %.6lf Yottabytes\n", zettabytes, zettabytes / 1000);
+                sprintf(log, "DATA SIZE: %.2lf Zettabytes -> %.6lf Yottabytes", zettabytes, zettabytes / 1000);
+                save_history(log);
+                break;
+            case 18:
+                double yottabytes;
+                printf("\nEnter Yottabytes: ");
+                scanf("%lf", &yottabytes);
+                printf("\n%.2lf Yottabytes = %.2lf Zettabytes\n", yottabytes, yottabytes * 1000);
+                sprintf(log, "DATA SIZE: %.2lf Yottabytes -> %.2lf Zettabytes", yottabytes, yottabytes * 1000);
+                save_history(log);
+                break;
+            default:
+                printf("\nInvalid choice. Please try again.\n");
+                break;
+        }
+    }
+}
+
+// binary data size conversions
+void binary_data_size_converter() {
+    while(1) {
+        printf("\n----- Binary Data Size Conversions -----\n");
+        printf("\n1. Bit -> Byte");
+        printf("\n2. Byte -> Bit");
+        printf("\n3. Byte -> Kibibyte");
+        printf("\n4. Kibibyte -> Byte");
+        printf("\n5. Kibibyte -> Mebibyte");
+        printf("\n6. Mebibyte -> Kibibyte");
+        printf("\n7. Mebibyte -> Gibibyte");
+        printf("\n8. Gibibyte -> Mebibyte");
+        printf("\n9. Gibibyte -> Tebibyte");
+        printf("\n10. Tebibyte -> Gibibyte");
+        printf("\n11. Tebibyte -> Pebibyte");
+        printf("\n12. Pebibyte -> Tebibyte");
+        printf("\n13. Pebibyte -> Exbibyte");
+        printf("\n14. Exbibyte -> Pebibyte");
+        printf("\n15. Exbibyte -> Zebibyte");
+        printf("\n16. Zebibyte -> Exbibyte");
+        printf("\n17. Zebibyte -> Yobibyte");
+        printf("\n18. Yobibyte -> Zebibyte");
+        printf("\n19. Back to Main Menu\n");
+        printf("\nChoose an option: ");
+
+        int choice;
+        scanf("%d", &choice);
+
+        if (choice == 19) {
+            break;
+        }
+        char log[200];
+        switch (choice) {
+            case 1:
+                int bits;
+                printf("\nEnter Bits: ");
+                scanf("%d", &bits);
+                printf("\n%.2d Bits = %.2lf Bytes\n", bits, bits / 8.0);
+                sprintf(log, "DATA SIZE: %d Bits -> %.2lf Bytes", bits, bits / 8.0);
+                save_history(log);
+                break;
+            case 2:
+                double bytes;
+                printf("\nEnter Bytes: ");
+                scanf("%lf", &bytes);
+                printf("\n%.2lf Bytes = %.2lf Bits\n", bytes, bytes * 8);
+                sprintf(log, "DATA SIZE: %.2lf Bytes -> %.2lf Bits", bytes, bytes * 8);
+                save_history(log);
+                break;
+            case 3:
+                printf("\nEnter Bytes: ");
+                scanf("%lf", &bytes);
+                printf("\n%.2lf Bytes = %.6lf Kibibytes\n", bytes, bytes / 1024);
+                sprintf(log, "DATA SIZE: %.2lf Bytes -> %.6lf Kibibytes", bytes, bytes / 1024);
+                save_history(log);
+                break;
+            case 4:
+                double kibibytes;
+                printf("\nEnter Kibibytes: ");
+                scanf("%lf", &kibibytes);
+                printf("\n%.2lf Kibibytes = %.2lf Bytes\n", kibibytes, kibibytes * 1024);
+                sprintf(log, "DATA SIZE: %.2lf Kibibytes -> %.2lf Bytes", kibibytes, kibibytes * 1024);
+                save_history(log);
+                break;
+            case 5:
+                printf("\nEnter Kibibytes: ");
+                scanf("%lf", &kibibytes);
+                printf("\n%.2lf Kibibytes = %.6lf Mebibytes\n", kibibytes, kibibytes / 1024);
+                sprintf(log, "DATA SIZE: %.2lf Kibibytes -> %.6lf Mebibytes", kibibytes, kibibytes / 1024);
+                save_history(log);
+                break;
+            case 6:
+                double mebibytes;
+                printf("\nEnter Mebibytes: ");
+                scanf("%lf", &mebibytes);
+                printf("\n%.2lf Mebibytes = %.2lf Kibibytes\n", mebibytes, mebibytes * 1024);
+                sprintf(log, "DATA SIZE: %.2lf Mebibytes -> %.2lf Kibibytes", mebibytes, mebibytes * 1024);
+                save_history(log);
+                break;
+            case 7:
+                printf("\nEnter Mebibytes: ");
+                scanf("%lf", &mebibytes);
+                printf("\n%.2lf Mebibytes = %.6lf Gibibytes\n", mebibytes, mebibytes / 1024);
+                sprintf(log, "DATA SIZE: %.2lf Mebibytes -> %.6lf Gibibytes", mebibytes, mebibytes / 1024);
+                save_history(log);
+                break;
+            case 8:
+                double gibibytes;
+                printf("\nEnter Gibibytes: ");
+                scanf("%lf", &gibibytes);
+                printf("\n%.2lf Gibibytes = %.2lf Mebibytes\n", gibibytes, gibibytes * 1024);
+                sprintf(log, "DATA SIZE: %.2lf Gibibytes -> %.2lf Mebibytes", gibibytes, gibibytes * 1024);
+                save_history(log);
+                break;
+            case 9:
+                printf("\nEnter Gibibytes: ");
+                scanf("%lf", &gibibytes);
+                printf("\n%.2lf Gibibytes = %.6lf Tebibytes\n", gibibytes, gibibytes / 1024);
+                sprintf(log, "DATA SIZE: %.2lf Gibibytes -> %.6lf Tebibytes", gibibytes, gibibytes / 1024);
+                save_history(log);
+                break;
+            case 10:
+                double tebibytes;
+                printf("\nEnter Tebibytes: ");
+                scanf("%lf", &tebibytes);
+                printf("\n%.2lf Tebibytes = %.2lf Gibibytes\n", tebibytes, tebibytes * 1024);
+                sprintf(log, "DATA SIZE: %.2lf Tebibytes -> %.2lf Gibibytes", tebibytes, tebibytes * 1024);
+                save_history(log);
+                break;
+            case 11:
+                printf("\nEnter Tebibytes: ");
+                scanf("%lf", &tebibytes);
+                printf("\n%.2lf Tebibytes = %.6lf Pebibytes\n", tebibytes, tebibytes / 1024);
+                sprintf(log, "DATA SIZE: %.2lf Tebibytes -> %.6lf Pebibytes", tebibytes, tebibytes / 1024);
+                save_history(log);
+                break;
+            case 12:
+                double pebibytes;
+                printf("\nEnter Pebibytes: ");
+                scanf("%lf", &pebibytes);
+                printf("\n%.2lf Pebibytes = %.2lf Tebibytes\n", pebibytes, pebibytes * 1024);
+                sprintf(log, "DATA SIZE: %.2lf Pebibytes -> %.2lf Tebibytes", pebibytes, pebibytes * 1024);
+                save_history(log);
+                break;
+            case 13:
+                printf("\nEnter Pebibytes: ");
+                scanf("%lf", &pebibytes);
+                printf("\n%.2lf Pebibytes = %.6lf Exbibytes\n", pebibytes, pebibytes / 1024);
+                sprintf(log, "DATA SIZE: %.2lf Pebibytes -> %.6lf Exbibytes", pebibytes, pebibytes / 1024);
+                save_history(log);
+                break;
+            case 14:
+                double exbibytes;
+                printf("\nEnter Exbibytes: ");
+                scanf("%lf", &exbibytes);
+                printf("\n%.2lf Exbibytes = %.2lf Pebibytes\n", exbibytes, exbibytes * 1024);
+                sprintf(log, "DATA SIZE: %.2lf Exbibytes -> %.2lf Pebibytes", exbibytes, exbibytes * 1024);
+                save_history(log);
+                break;
+            case 15:
+                printf("\nEnter Exbibytes: ");
+                scanf("%lf", &exbibytes);
+                printf("\n%.2lf Exbibytes = %.6lf Zebibytes\n", exbibytes, exbibytes / 1024);
+                sprintf(log, "DATA SIZE: %.2lf Exbibytes -> %.6lf Zebibytes", exbibytes, exbibytes / 1024);
+                save_history(log);
+                break;
+            case 16:
+                double zebibytes;
+                printf("\nEnter Zebibytes: ");
+                scanf("%lf", &zebibytes);
+                printf("\n%.2lf Zebibytes = %.2lf Exbibytes\n", zebibytes, zebibytes * 1024);
+                sprintf(log, "DATA SIZE: %.2lf Zebibytes -> %.2lf Exbibytes", zebibytes, zebibytes * 1024);
+                save_history(log);
+                break;
+            case 17:
+                printf("\nEnter Zebibytes: ");
+                scanf("%lf", &zebibytes);
+                printf("\n%.2lf Zebibytes = %.6lf Yobibytes\n", zebibytes, zebibytes / 1024);
+                sprintf(log, "DATA SIZE: %.2lf Zebibytes -> %.6lf Yobibytes", zebibytes, zebibytes / 1024);
+                save_history(log);
+                break;
+            case 18:
+                double yobibytes;
+                printf("\nEnter Yobibytes: ");
+                scanf("%lf", &yobibytes);
+                printf("\n%.2lf Yobibytes = %.2lf Zebibytes\n", yobibytes, yobibytes * 1024);
+                sprintf(log, "DATA SIZE: %.2lf Yobibytes -> %.2lf Zebibytes", yobibytes, yobibytes * 1024);
+                save_history(log);
+                break;
+            default:
+                printf("\nInvalid choice. Please try again.\n");
+                break;
+        }
+    }
+}
+
+// =================== Area =================
+
+// Metric Area Conversions
+void metric_area_converter() {
+    while(1) {
+        printf("\n----- Metric Area Conversions -----\n");
+        printf("\n1. Milimeters² to Centimeters²");
+        printf("\n2. Centimeters² to Milimeters²");
+        printf("\n3. Centimeters² to Meters²");
+        printf("\n4. Meters² to Centimeters²");
+        printf("\n5. Meters² to Hectares");
+        printf("\n6. Hectares to Meters²");
+        printf("\n7. Meters² to Kilometers²");
+        printf("\n8. Kilometers² to Meters²");
+        printf("\n9. Back to Main Menu\n");
+        printf("\nChoose an option: ");
+
+        int choice;
+        scanf("%d", &choice);
+
+        if (choice == 9) {
+            break;
+        }
+        char log[200];
+        switch (choice) {
+            case 1:
+                double mm2;
+                printf("\nEnter Milimeters²: ");
+                scanf("%lf", &mm2);
+                printf("\n%.2lf mm² = %.2lf cm²\n", mm2, mm2 / 100);
+                sprintf(log, "AREA: %.2lf mm² -> %.2lf cm²", mm2, mm2 / 100);
+                save_history(log);
+                break;
+            case 2:
+                double cm2;
+                printf("\nEnter Centimeters²: ");
+                scanf("%lf", &cm2);
+                printf("\n%.2lf cm² = %.2lf mm²\n", cm2, cm2 * 100);
+                sprintf(log, "AREA: %.2lf cm² -> %.2lf mm²", cm2, cm2 * 100);
+                save_history(log);
+                break;
+            case 3:
+                printf("\nEnter Centimeters²: ");
+                scanf("%lf", &cm2);
+                printf("\n%.2lf cm² = %.6lf m²\n", cm2, cm2 / 10000);
+                sprintf(log, "AREA: %.2lf cm² -> %.6lf m²", cm2, cm2 / 10000);
+                save_history(log);
+                break;
+            case 4:
+                double m2;
+                printf("\nEnter Meters²: ");
+                scanf("%lf", &m2);
+                printf("\n%.2lf m² = %.2lf cm²\n", m2, m2 * 10000);
+                sprintf(log, "AREA: %.2lf m² -> %.2lf cm²", m2, m2 * 10000);
+                save_history(log);
+                break;
+            case 5:
+                printf("\nEnter Meters²: ");
+                scanf("%lf", &m2);
+                printf("\n%.2lf m² = %.6lf Hectares\n", m2, m2 / 10000);
+                sprintf(log, "AREA: %.2lf m² -> %.6lf Hectares", m2, m2 / 10000);
+                save_history(log);
+                break;
+            case 6:
+                double hectares;
+                printf("\nEnter Hectares: ");
+                scanf("%lf", &hectares);
+                printf("\n%.2lf Hectares = %.2lf m²\n", hectares, hectares * 10000);
+                sprintf(log, "AREA: %.2lf Hectares -> %.2lf m²", hectares, hectares * 10000);
+                save_history(log);
+                break;
+            case 7:
+                printf("\nEnter Meters²: ");
+                scanf("%lf", &m2);
+                printf("\n%.2lf m² = %.6lf km²\n", m2, m2 / 1000000);
+                sprintf(log, "AREA: %.2lf m² -> %.6lf km²", m2, m2 / 1000000);
+                save_history(log);
+                break;
+            case 8:
+                double km2;
+                printf("\nEnter Kilometers²: ");
+                scanf("%lf", &km2);
+                printf("\n%.2lf km² = %.2lf m²\n", km2, km2 * 1000000);
+                sprintf(log, "AREA: %.2lf km² -> %.2lf m²", km2, km2 * 1000000);
+                save_history(log);
+                break;
+            default:
+                printf("\nInvalid choice. Please try again.\n");
+                break;
+        }
+    }
+}
+
+// Imperial Area Conversions
+void imperial_area_converter() {
+    while(1) {
+        printf("\n----- Imperial Area Conversions -----\n");
+        printf("\n1. Square Inches to Square Feet");
+        printf("\n2. Square Feet to Square Inches");
+        printf("\n3. Square Feet to Square Yards");
+        printf("\n4. Square Yards to Square Feet");
+        printf("\n5. Square Yards to Acres");
+        printf("\n6. Acres to Square Yards");
+        printf("\n7. Acres to Square Miles");
+        printf("\n8. Square Miles to Acres");
+        printf("\n9. Back to Main Menu\n");
+        printf("\nChoose an option: ");
+
+        int choice;
+        scanf("%d", &choice);
+
+        if (choice == 9) {
+            break;
+        }
+        char log[200];
+        switch (choice) {
+            case 1:
+                double in2;
+                printf("\nEnter Square Inches: ");
+                scanf("%lf", &in2);
+                printf("\n%.2lf in² = %.4lf ft²\n", in2, in2 / 144);
+                sprintf(log, "AREA: %.2lf in² -> %.4lf ft²", in2, in2 / 144);
+                save_history(log);
+                break;
+            case 2:
+                double ft2;
+                printf("\nEnter Square Feet: ");
+                scanf("%lf", &ft2);
+                printf("\n%.2lf ft² = %.2lf in²\n", ft2, ft2 * 144);
+                sprintf(log, "AREA: %.2lf ft² -> %.2lf in²", ft2, ft2 * 144);
+                save_history(log);
+                break;
+            case 3:
+                printf("\nEnter Square Feet: ");
+                scanf("%lf", &ft2);
+                printf("\n%.2lf ft² = %.4lf yd²\n", ft2, ft2 / 9);
+                sprintf(log, "AREA: %.2lf ft² -> %.4lf yd²", ft2, ft2 / 9);
+                save_history(log);
+                break;
+            case 4:
+                double yd2;
+                printf("\nEnter Square Yards: ");
+                scanf("%lf", &yd2);
+                printf("\n%.2lf yd² = %.2lf ft²\n", yd2, yd2 * 9);
+                sprintf(log, "AREA: %.2lf yd² -> %.2lf ft²", yd2, yd2 * 9);
+                save_history(log);
+                break;
+            case 5:
+                printf("\nEnter Square Yards: ");
+                scanf("%lf", &yd2);
+                printf("\n%.2lf yd² = %.6lf Acres\n", yd2, yd2 / 4840);
+                sprintf(log, "AREA: %.2lf yd² -> %.6lf Acres", yd2, yd2 / 4840);
+                save_history(log);
+                break;
+            case 6:
+                double acres;
+                printf("\nEnter Acres: ");
+                scanf("%lf", &acres);
+                printf("\n%.2lf Acres = %.2lf yd²\n", acres, acres * 4840);
+                sprintf(log, "AREA: %.2lf Acres -> %.2lf yd²", acres, acres * 4840);
+                save_history(log);
+                break;
+            case 7:
+                printf("\nEnter Acres: ");
+                scanf("%lf", &acres);
+                printf("\n%.2lf Acres = %.6lf mi²\n", acres, acres / 640);
+                sprintf(log, "AREA: %.2lf Acres -> %.6lf mi²", acres, acres / 640);
+                save_history(log);
+                break;
+            case 8:
+                double mi2;
+                printf("\nEnter Square Miles: ");
+                scanf("%lf", &mi2);
+                printf("\n%.2lf mi² = %.2lf Acres\n", mi2, mi2 * 640);
+                sprintf(log, "AREA: %.2lf mi² -> %.2lf Acres", mi2, mi2 * 640);
+                save_history(log);
+                break;
+            default:
+                printf("\nInvalid choice. Please try again.\n");
+                break;
+        }
+    }
+}
+
+// Global Area Conversions
+void global_area_converter() {
+    while(1) {
+        printf("\n===== Area Conversions =====\n");
+        printf("\n1. Meter Square (m²) to Foot Square (ft²)");
+        printf("\n2. Foot Square (ft²) to Meter Square (m²)");
+        printf("\n3. Acre to Hectare");
+        printf("\n4. Hectare to Acre");
+        printf("\n5. Kilometer Square (km²) to Mile Square (mi²)");
+        printf("\n6. Mile Square (mi²) to Kilometer Square (km²)");
+        printf("\n7. Back to Main Menu\n");
+        printf("\nChoose an option: ");
+
+        int choice;
+        scanf("%d", &choice);
+
+        if (choice == 7) {
+            break;
+        }
+        char log[200];
+        switch (choice) {
+            case 1:
+                double m2;
+                printf("\nEnter Meter Square (m²): ");
+                scanf("%lf", &m2);
+                printf("\n%.2lf m² = %.4lf ft²\n", m2, m2 * 10.7639);
+                sprintf(log, "AREA: %.2lf m² -> %.4lf ft²", m2, m2 * 10.7639);
+                save_history(log);
+                break;
+            case 2:
+                double ft2;
+                printf("\nEnter Foot Square (ft²): ");
+                scanf("%lf", &ft2);
+                printf("\n%.2lf ft² = %.4lf m²\n", ft2, ft2 / 10.7639);
+                sprintf(log, "AREA: %.2lf ft² -> %.4lf m²", ft2, ft2 / 10.7639);
+                save_history(log);
+                break;
+            case 3:
+                double acres;
+                printf("\nEnter Acre: ");
+                scanf("%lf", &acres);
+                printf("\n%.2lf Acres = %.4lf Hectares\n", acres, acres * 0.404686);
+                sprintf(log, "AREA: %.2lf Acres -> %.4lf Hectares", acres, acres * 0.404686);
+                save_history(log);
+                break;
+            case 4:
+                double hectares;
+                printf("\nEnter Hectare: ");
+                scanf("%lf", &hectares);
+                printf("\n%.2lf Hectares = %.4lf Acres\n", hectares, hectares / 0.404686);
+                sprintf(log, "AREA: %.2lf Hectares -> %.4lf Acres", hectares, hectares / 0.404686);
+                save_history(log);
+                break;
+            case 5:
+                double km2;
+                printf("\nEnter Kilometer Square (km²): ");
+                scanf("%lf", &km2);
+                printf("\n%.2lf km² = %.4lf mi²\n", km2, km2 * 0.386102);
+                sprintf(log, "AREA: %.2lf km² -> %.4lf mi²", km2, km2 * 0.386102);
+                save_history(log);
+                break;
+            case 6:
+                double mi2;
+                printf("\nEnter Mile Square (mi²): ");
+                scanf("%lf", &mi2);
+                printf("\n%.2lf mi² = %.4lf km²\n", mi2, mi2 / 0.386102);
+                sprintf(log, "AREA: %.2lf mi² -> %.4lf km²", mi2, mi2 / 0.386102);
+                save_history(log);
+                break;
+            default:
+                printf("\nInvalid choice. Please try again.\n");
+                break;
+        }
+    }
+}
+
+//================= Pressure =================
+
+// Pascal to kilopascal
+void pascal_to_kilopascal() {
+    double pascal;
+    printf("\nEnter Pressure in Pascal: ");
+    scanf("%lf", &pascal);
+    printf("\n%.2lf Pa = %.6lf kPa\n", pascal, pascal / 1000);
+    char log[200];
+    sprintf(log, "PRESSURE: %.2lf Pa -> %.6lf kPa", pascal, pascal / 1000);
+    save_history(log);
+}
+
+// kilopascal to Pascal
+void kilopascal_to_pascal() {
+    double kilopascal;
+    printf("\nEnter Pressure in Kilopascal: ");
+    scanf("%lf", &kilopascal);
+    printf("\n%.2lf kPa = %.2lf Pa\n", kilopascal, kilopascal * 1000);
+    char log[200];
+    sprintf(log, "PRESSURE: %.2lf kPa -> %.2lf Pa", kilopascal, kilopascal * 1000);
+    save_history(log);
+}
+
+// kilopascal to megapascal
+void kilopascal_to_megapascal() {
+    double kilopascal;
+    printf("\nEnter Pressure in Kilopascal: ");
+    scanf("%lf", &kilopascal);
+    printf("\n%.2lf kPa = %.6lf MPa\n", kilopascal, kilopascal / 1000);
+    char log[200];
+    sprintf(log, "PRESSURE: %.2lf kPa -> %.6lf MPa", kilopascal, kilopascal / 1000);
+    save_history(log);
+}
+
+// megapascal to kilopascal
+void megapascal_to_kilopascal() {
+    double megapascal;
+    printf("\nEnter Pressure in Megapascal: ");
+    scanf("%lf", &megapascal);
+    printf("\n%.2lf MPa = %.2lf kPa\n", megapascal, megapascal * 1000);
+    char log[200];
+    sprintf(log, "PRESSURE: %.2lf MPa -> %.2lf kPa", megapascal, megapascal * 1000);
+    save_history(log);
+}
+
+// kilopascal to bar
+void kilopascal_to_bar() {
+    double kilopascal;
+    printf("\nEnter Pressure in Kilopascal: ");
+    scanf("%lf", &kilopascal);
+    printf("\n%.2lf kPa = %.6lf bar\n", kilopascal, kilopascal / 100);
+    char log[200];
+    sprintf(log, "PRESSURE: %.2lf kPa -> %.6lf bar", kilopascal, kilopascal / 100);
+    save_history(log);
+}
+
+// bar to kilopascal
+void bar_to_kilopascal() {
+    double bar;
+    printf("\nEnter Pressure in Bar: ");
+    scanf("%lf", &bar);
+    printf("\n%.2lf bar = %.2lf kPa\n", bar, bar * 100);
+    char log[200];
+    sprintf(log, "PRESSURE: %.2lf bar -> %.2lf kPa", bar, bar * 100);
+    save_history(log);
+}
+
+// bar to atmosphere
+void bar_to_atmosphere() {
+    double bar;
+    printf("\nEnter Pressure in Bar: ");
+    scanf("%lf", &bar);
+    printf("\n%.2lf bar = %.6lf atm\n", bar, bar / 1.01325);
+    char log[200];
+    sprintf(log, "PRESSURE: %.2lf bar -> %.6lf atm", bar, bar / 1.01325);
+    save_history(log);
+}
+
+// atmosphere to bar
+void atmosphere_to_bar() {
+    double atmosphere;
+    printf("\nEnter Pressure in Atmosphere: ");
+    scanf("%lf", &atmosphere);
+    printf("\n%.2lf atm = %.2lf bar\n", atmosphere, atmosphere * 1.01325);
+    char log[200];
+    sprintf(log, "PRESSURE: %.2lf atm -> %.2lf bar", atmosphere, atmosphere * 1.01325);
+    save_history(log);
+}
+
+// atmosphere to mmHg
+void atmosphere_to_mmhg() {
+    double atmosphere;
+    printf("\nEnter Pressure in Atmosphere: ");
+    scanf("%lf", &atmosphere);
+    printf("\n%.2lf atm = %.2lf mmHg\n", atmosphere, atmosphere * 760);
+    char log[200];
+    sprintf(log, "PRESSURE: %.2lf atm -> %.2lf mmHg", atmosphere, atmosphere * 760);
+    save_history(log);
+}
+
+// mmHg to atmosphere
+void mmhg_to_atmosphere() {
+    double mmhg;
+    printf("\nEnter Pressure in mmHg: ");
+    scanf("%lf", &mmhg);
+    printf("\n%.2lf mmHg = %.6lf atm\n", mmhg, mmhg / 760);
+    char log[200];
+    sprintf(log, "PRESSURE: %.2lf mmHg -> %.6lf atm", mmhg, mmhg / 760);
+    save_history(log);
+}
+
+// psi to kilopascal
+void psi_to_kilopascal() {
+    double psi;
+    printf("\nEnter Pressure in PSI: ");
+    scanf("%lf", &psi);
+    printf("\n%.2lf PSI = %.6lf kPa\n", psi, psi * 6.89476);
+    char log[200];
+    sprintf(log, "PRESSURE: %.2lf PSI -> %.6lf kPa", psi, psi * 6.89476);
+    save_history(log);
+}
+
+// kilopascal to psi
+void kilopascal_to_psi() {
+    double kilopascal;
+    printf("\nEnter Pressure in Kilopascal: ");
+    scanf("%lf", &kilopascal);
+    printf("\n%.2lf kPa = %.2lf PSI\n", kilopascal, kilopascal / 6.89476);
+    char log[200];
+    sprintf(log, "PRESSURE: %.2lf kPa -> %.2lf PSI", kilopascal, kilopascal / 6.89476);
+    save_history(log);
+}
+
+// psi to bar
+void psi_to_bar() {
+    double psi;
+    printf("\nEnter Pressure in PSI: ");
+    scanf("%lf", &psi);
+    printf("\n%.2lf PSI = %.6lf bar\n", psi, psi / 14.5038);
+    char log[200];
+    sprintf(log, "PRESSURE: %.2lf PSI -> %.6lf bar", psi, psi / 14.5038);
+    save_history(log);
+}
+
+// bar to psi
+void bar_to_psi() {
+    double bar;
+    printf("\nEnter Pressure in Bar: ");
+    scanf("%lf", &bar);
+    printf("\n%.2lf bar = %.2lf PSI\n", bar, bar * 14.5038);
+    char log[200];
+    sprintf(log, "PRESSURE: %.2lf bar -> %.2lf PSI", bar, bar * 14.5038);
+    save_history(log);
+}
+
+// =================== Power =================
+
+// Watt to Kilowatt
+void watt_to_kwatt() {
+    double watt;
+    printf("\nEnter Power in Watt: ");
+    scanf("%lf", &watt);
+    printf("\n%.2lf W = %.6lf kW\n", watt, watt / 1000);
+    char log[200];
+    sprintf(log, "POWER: %.2lf W -> %.6lf kW", watt, watt / 1000);
+    save_history(log);
+}
+
+// Kilowatt to Watt
+void kwatt_to_watt() {
+    double kilowatt;
+    printf("\nEnter Power in Kilowatt: ");
+    scanf("%lf", &kilowatt);
+    printf("\n%.2lf kW = %.2lf W\n", kilowatt, kilowatt * 1000);
+    char log[200];
+    sprintf(log, "POWER: %.2lf kW -> %.2lf W", kilowatt, kilowatt * 1000);
+    save_history(log);
+}
+
+// kilowatt to Megawatt
+void kwatt_to_mwatt() {
+    double kilowatt;
+    printf("\nEnter Power in Kilowatt: ");
+    scanf("%lf", &kilowatt);
+    printf("\n%.2lf kW = %.6lf MW\n", kilowatt, kilowatt / 1000);
+    char log[200];
+    sprintf(log, "POWER: %.2lf kW -> %.6lf MW", kilowatt, kilowatt / 1000);
+    save_history(log);
+}
+
+// Megawatt to Kilowatt
+void mwatt_to_kwatt() {
+    double megawatt;
+    printf("\nEnter Power in Megawatt: ");
+    scanf("%lf", &megawatt);
+    printf("\n%.2lf MW = %.2lf kW\n", megawatt, megawatt * 1000);
+    char log[200];
+    sprintf(log, "POWER: %.2lf MW -> %.2lf kW", megawatt, megawatt * 1000);
+    save_history(log);
+}
+
+// megawatt to Gigawatt
+void mwatt_to_gwatt() {
+    double megawatt;
+    printf("\nEnter Power in Megawatt: ");
+    scanf("%lf", &megawatt);
+    printf("\n%.2lf MW = %.6lf GW\n", megawatt, megawatt / 1000);
+    char log[200];
+    sprintf(log, "POWER: %.2lf MW -> %.6lf GW", megawatt, megawatt / 1000);
+    save_history(log);
+}
+
+// Gigawatt to Megawatt
+void gwatt_to_mwatt() {
+    double gigawatt;
+    printf("\nEnter Power in Gigawatt: ");
+    scanf("%lf", &gigawatt);
+    printf("\n%.2lf GW = %.2lf MW\n", gigawatt, gigawatt * 1000);
+    char log[200];
+    sprintf(log, "POWER: %.2lf GW -> %.2lf MW", gigawatt, gigawatt * 1000);
+    save_history(log);
+}
+
+// kilowatt to Horsepower
+void kwatt_to_hp() {
+    double kilowatt;
+    printf("\nEnter Power in Kilowatt: ");
+    scanf("%lf", &kilowatt);
+    printf("\n%.2lf kW = %.6lf HP\n", kilowatt, kilowatt * 1.34102);
+    char log[200];
+    sprintf(log, "POWER: %.2lf kW -> %.6lf HP", kilowatt, kilowatt * 1.34102);
+    save_history(log);
+}
+
+// Horsepower to Kilowatt
+void hp_to_kwatt() {
+    double horsepower;
+    printf("\nEnter Power in Horsepower: ");
+    scanf("%lf", &horsepower);
+    printf("\n%.2lf HP = %.2lf kW\n", horsepower, horsepower / 1.34102);
+    char log[200];
+    sprintf(log, "POWER: %.2lf HP -> %.2lf kW", horsepower, horsepower / 1.34102);
+    save_history(log);
+}
+
+// watt to Horsepower
+void watt_to_hp() {
+    double watt;
+    printf("\nEnter Power in Watt: ");
+    scanf("%lf", &watt);
+    printf("\n%.2lf W = %.6lf HP\n", watt, watt * 0.00134102);
+    char log[200];
+    sprintf(log, "POWER: %.2lf W -> %.6lf HP", watt, watt * 0.00134102);
+    save_history(log);
+}
+
+// Horsepower to Watt
+void hp_to_watt() {
+    double horsepower;
+    printf("\nEnter Power in Horsepower: ");
+    scanf("%lf", &horsepower);
+    printf("\n%.2lf HP = %.2lf W\n", horsepower, horsepower / 0.00134102);
+    char log[200];
+    sprintf(log, "POWER: %.2lf HP -> %.2lf W", horsepower, horsepower / 0.00134102);
+    save_history(log);
+}
+
+// watt to BTU per hour
+void watt_to_btu_per_hour() {
+    double watt;
+    printf("\nEnter Power in Watt: ");
+    scanf("%lf", &watt);
+    printf("\n%.2lf W = %.6lf BTU/hr\n", watt, watt * 3.41214);
+    char log[200];
+    sprintf(log, "POWER: %.2lf W -> %.6lf BTU/hr", watt, watt * 3.41214);
+    save_history(log);
+}
+
+// BTU per hour to watt
+void btu_per_hour_to_watt() {
+    double btu_per_hour;
+    printf("\nEnter Power in BTU per hour: ");
+    scanf("%lf", &btu_per_hour);
+    printf("\n%.2lf BTU/hr = %.2lf W\n", btu_per_hour, btu_per_hour / 3.41214);
+    char log[200];
+    sprintf(log, "POWER: %.2lf BTU/hr -> %.2lf W", btu_per_hour, btu_per_hour / 3.41214);
+    save_history(log);
+}
+
 // ================= NUMBER SYSTEM CONVERSIONS =================
 
 // Decimal to Binary

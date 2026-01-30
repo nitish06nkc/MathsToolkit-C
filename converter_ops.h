@@ -212,6 +212,107 @@ void month_to_year();
 // years to months
 void year_to_month();
 
+// ================= Data Conversions =================
+
+// Decimal data size conversions
+void decimal_data_size_converter();
+
+// Binary data size conversions
+void binary_data_size_converter();
+
+// ================= Areas Conversions =================
+
+// Metric Area Conversions
+void metric_area_converter();
+
+// Imperial Area Conversions
+void imperial_area_converter();
+
+// Global Area Conversions
+void global_area_converter();
+
+// ================= Pressure Conversions =================
+
+// pascal to kilopascal
+void pascal_to_kilopascal();
+
+// kilopascal to pascal
+void kilopascal_to_pascal();
+
+// kilopascal to megapascal
+void kilopascal_to_megapascal();
+
+// megapascal to kilopascal
+void megapascal_to_kilopascal();
+
+// kilopascal to bar
+void kilopascal_to_bar();
+
+// bar to kilopascal
+void bar_to_kilopascal();
+
+// bar to atmosphere
+void bar_to_atmosphere();
+
+// atmosphere to bar
+void atmosphere_to_bar();
+
+// atmosphere to mmhg
+void atmosphere_to_mmhg();
+
+// mmhg to atmosphere
+void mmhg_to_atmosphere();
+
+//psi to kilopascal
+void psi_to_kilopascal();
+
+// kilopascal to psi
+void kilopascal_to_psi();
+
+// psi to bar
+void psi_to_bar();
+
+// bar to psi
+void bar_to_psi();
+
+// ================= Power Conversions =================
+
+// watt to kilowatt
+void watt_to_kwatt();
+
+// kilowatt to watt
+void kwatt_to_watt();
+
+// kilowatt to megawatt
+void kwatt_to_mwatt();
+
+// megawatt to kilowatt
+void mwatt_to_kwatt();
+
+// megawatt to gigawatt
+void mwatt_to_gwatt();
+
+// gigawatt to megawatt
+void gwatt_to_mwatt();
+
+// kilowatt to horsepower
+void kwatt_to_hp();
+
+// horsepower to kilowatt
+void hp_to_kwatt();
+
+// watt to horsepower
+void watt_to_hp();
+
+// horsepower to watt
+void hp_to_watt();
+
+// watt to BTU per hour
+void watt_to_btu_per_hour();
+
+// BTU per hour to watt
+void btu_per_hour_to_watt();
+
 // ================= NUMBER SYSTEM CONVERSIONS =================
 
 // Decimal to Binary
