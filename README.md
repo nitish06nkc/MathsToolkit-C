@@ -71,7 +71,7 @@ Unit converters for temperature, length, mass, volume, energy, speed, time, data
 BMI calculator, percentage calculator, leap year checker, and ASCII value finder.
 
 ### ⭐ Pattern Generator  
-Star patterns, number patterns, Pascal’s triangle, pyramids, diamonds, and more.
+Star patterns, number patterns, Pascal’s triangle, pyramids, diamonds, x and more.
 
 ### 📝 History Logging System  
 Stores and displays calculation history with an option to clear history.
