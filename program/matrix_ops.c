@@ -214,3 +214,41 @@ void skew_symmetric_matrix() {
     printf("\nMatrix is skew-symmetric\n");
     log_matrix("SKEW-SYMMETRIC CHECK", r, c);
 }
+
+// Calculate determinant of a matrix
+int determinant_calc(int n, int matrix[n][n]) {
+    int det = 0;
+
+    if (n == 1)
+        return matrix[0][0];
+
+    if (n == 2)
+        return (matrix[0][0] * matrix[1][1]) -
+               (matrix[0][1] * matrix[1][0]);
+
+    for (int x = 0; x < n; x++) {
+        int submatrix[n-1][n-1];
+        int subi = 0;
+
+        for (int i = 1; i < n; i++) {
+            int subj = 0;
+            for (int j = 0; j < n; j++) {
+                if (j == x)
+                    continue;
+                submatrix[subi][subj] = matrix[i][j];
+                subj++;
+            }
+            subi++;
+        }
+
+        det += (x % 2 == 0 ? 1 : -1) *
+               matrix[0][x] *
+               determinant_calc(n - 1, submatrix);
+    }
+
+    return det;
+
+    char log[200];
+    sprintf(log, "MATRIX DETERMINANT: %dx%d", n, n);
+    save_history(log);
+}

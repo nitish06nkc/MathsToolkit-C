@@ -4,6 +4,7 @@
 #include "history_ops.h"
 #include <string.h>
 
+
 // Check whether a number is prime
 int is_prime(int n) {
     if(n <= 1) return 0;

@@ -13,4 +13,12 @@ void leap_year_checker();
 // Finds ASCII value of a given character
 void ascii_finder();
 
+// time zone converter
+void time_zone_converter();
+
+// age calculator
+void age_calculator();
+
+// date difference calculator
+void date_difference_calculator();
 #endif

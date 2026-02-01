@@ -8,6 +8,7 @@ void save_history(const char *operation);
 void view_history();
 
 // Clear all history records
+
 void clear_history();
 
 #endif

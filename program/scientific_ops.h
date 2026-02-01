@@ -1,6 +1,8 @@
 #ifndef SCIENTIFIC_OPS_H
 #define SCIENTIFIC_OPS_H
 
+// -------- SCIENTIFIC CALCULATOR FUNCTIONS --------
+
 // Power function: calculates a^b
 double power_calc(double a , double b);
 

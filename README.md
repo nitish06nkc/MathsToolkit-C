@@ -1,128 +1,178 @@
-# 📌 Menu Based Maths Toolkit in C
+# 📐 MathsToolkit-C
 
-## 👨‍💻 Developer  
-**Nitish Kumar Chaudhary**  
-B.Tech Computer Science & Engineering Student  
-Interested in Cybersecurity, Cloud Computing, and DevOps  
+> A comprehensive command-line mathematical toolkit written in C
 
----
-
-## 🧠 What is This Project?
-
-**Menu Based Maths Toolkit** is a comprehensive command-line (**CLI**) based software developed in the C programming language.  
-It provides a single platform to perform various mathematical calculations, conversions, real-world utilities, and pattern generation using a user-friendly menu-driven interface.
+**Developer:** Nitish Kumar Chaudhary
 
 ---
 
-## 🎯 Purpose of This Project
+## 📖 About This Project
 
-This project was created to:
+**MathsToolkit-C** is a modular, menu-driven **CLI toolkit** built in **C** that combines calculators, number/matrix/stats utilities, finance tools, converters, patterns, bitwise operations, and a history logger into one program.
 
-- Practice **core C programming concepts**
-- Learn **modular programming using header files**
-- Build a **large structured real-world project**
-- Improve **logic building and problem-solving skills**
-- Understand how real software is organized into multiple modules  
-
-It is also intended to help beginners perform mathematical and utility operations easily from a single program.
+Each feature is implemented in its own module (`*.c` + `*.h`), while `main.c` acts as the central menu controller.
 
 ---
 
-## 🧩 Concepts Used in C Language
+## 🎯 Purpose
 
-This project uses many important C programming concepts:
+This project helps you:
 
-- Functions and Modular Programming  
-- Header Files (`.h`) and Source Files (`.c`)  
-- Loops (for, while, do-while)  
-- Conditional Statements (if-else, switch-case)  
-- Arrays and Strings  
-- File Handling (History Logging System)  
-- Mathematical Functions and Libraries  
-- User Input and Output Handling  
-- Structured Program Design  
+- Run a wide set of **math + utility tools** from a single CLI program
+- Use a **menu-based interface** to access different modules quickly
+- Explore a **modular C codebase** where each domain is separated cleanly
+- Keep a **history log** of operations and manage it from the menu
 
 ---
 
-## 🚀 Features of the Toolkit
+## ✨ Features (Main Menu)
 
-### 🔢 Basic Calculator  
-Addition, Subtraction, Multiplication, and Division for multiple numbers.
-
-### 🧮 Scientific Calculator  
-Power, Square Root, Cube Root, Logarithms, Trigonometry, Degree-Radian conversion, Quadratic Equation Solver, Permutation and Combination.
-
-### 🔢 Number Operations  
-Prime number check, Fibonacci series, Factorial, Armstrong number, Palindrome check, GCD & LCM, digit operations.
-
-### 🧮 Matrix Operations  
-Matrix addition, subtraction, multiplication, transpose and symmetric + skew symmetric matrices checking feature.
-
-### 📊 Statistics Tools  
-Mean, Median, and Mode calculations.
-
-### 💰 Financial Tools  
-Simple Interest, Compound Interest, and Currency Exchange calculator.
-
-### 🔄 Converters  
-Unit converters for temperature, length, mass, volume, energy, speed, time, data, area, pressure, power and number system conversions.
-
-### 🌍 Real World Utilities  
-BMI calculator, percentage calculator, leap year checker, and ASCII value finder.
-
-### ⭐ Pattern Generator  
-Star patterns, number patterns, Pascal’s triangle, pyramids, diamonds, x and more.
-
-### 📝 History Logging System  
-Stores and displays calculation history with an option to clear history.
+- **Basic Calculator** — add/subtract/multiply/divide for multiple inputs  
+- **Scientific Calculator** — powers/roots/logs/trig, degree↔radian, quadratic roots, nPr/nCr, modulus  
+- **Number Operations** — prime tools, GCD/LCM, reverse/palindrome/armstrong, digits, factorial, fibonacci  
+- **Matrix & Determinants** — matrix ops + symmetry checks + determinant  
+- **Statistics Tools** — mean/median/mode/range/variance/std-dev  
+- **Finance Kit** — interest, currency exchange, P/L, discount, salary, tax, GST, loan, SIP, FD/RD, inflation, retirement  
+- **Conversion System** — unit converters + number system converters (bin/oct/dec/hex)  
+- **Real World Utilities** — BMI, percentage, leap year, ASCII, time zone, age, date difference  
+- **Patterns** — star patterns + number patterns (includes Pascal/Floyd)  
+- **Bitwise Operations** — AND/OR/XOR/NOT, left/right shifts  
+- **History** — view and clear stored history  
 
 ---
 
-## 🏗️ Project Structure
+## 📁 Project Structure
 
-### Main File
-- `main.c` → Main program controller and menu system  
-
-### Modules
-- `basic_ops.c / basic_ops.h` → Basic calculator operations  
-- `scientific_ops.c / scientific_ops.h` → Scientific calculations  
-- `number_ops.c / number_ops.h` → Number operations  
-- `matrix_ops.c / matrix_ops.h` → Matrix operations  
-- `stats_ops.c / stats_ops.h` → Statistical functions  
-- `financial_ops.c / financial_ops.h` → Financial calculators  
-- `converter_ops.c / converter_ops.h` → Unit and number system converters  
-- `realworld_ops.c / realworld_ops.h` → Real-world utilities  
-- `pattern_ops.c / pattern_ops.h` → Pattern generators  
-- `history_ops.c / history_ops.h` → History logging system  
-
-### Documentation
-- `README.md` → Project documentation  
-
----
-
-## ▶️ How to Run
-
-### 1️⃣ Compile the Project
 ```
-gcc main.c basic_ops.c scientific_ops.c number_ops.c matrix_ops.c stats_ops.c financial_ops.c converter_ops.c realworld_ops.c pattern_ops.c history_ops.c -o toolkit -lm
-```
-### 2️⃣ Run the Program
-```
-./toolkit
+MathsToolkit-C/program/
+│
+├── 📄 main.c
+│
+├── 🔢 Basic Calculator Module
+│   ├── basic_ops.c
+│   └── basic_ops.h
+│
+├── 🔬 Scientific Calculator Module
+│   ├── scientific_ops.c
+│   └── scientific_ops.h
+│
+├── 🔢 Number Operations Module
+│   ├── number_ops.c
+│   └── number_ops.h
+│
+├── 📊 Matrix Operations Module
+│   ├── matrix_ops.c
+│   └── matrix_ops.h
+│
+├── 📈 Statistics Module
+│   ├── stats_ops.c
+│   └── stats_ops.h
+│
+├── 💰 Finance Module
+│   ├── financial_ops.c
+│   └── financial_ops.h
+│
+├── 🔄 Converter Module
+│   ├── converter_ops.c
+│   └── converter_ops.h
+│
+├── 🌍 Real-World Utilities Module
+│   ├── realworld_ops.c
+│   └── realworld_ops.h
+│
+├── ⭐ Pattern Generator Module
+│   ├── pattern_ops.c
+│   └── pattern_ops.h
+│
+├── ⚡ Bitwise Operations Module
+│   ├── bitwise_ops.c
+│   └── bitwise_ops.h
+│
+├── 📝 History Module
+│   ├── history_ops.c
+│   └── history_ops.h
+│
+└── 📚 Documentation
+    └── README.md
 ```
 
 ---
 
 ## 💻 Requirements
-- C Compiler (GCC / MinGW / Turbo C)
-- Windows / Linux / macOS
-- Basic terminal or command prompt knowledge
+
+- **Compiler:** GCC / Clang / MinGW  
+- **OS:** Linux / macOS / Windows  
+- **Libraries:** Math library required (`-lm`)  
+- **Tools:** `git` (for cloning)
 
 ---
 
-## 🌱 Final Note
-This is my first major C programming project, built during my learning journey in Computer Science.
-I hope you enjoy exploring this project and learning from it.
+## 🚀 Installation & Usage
 
-Thank you for checking it out! 😊
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/nitish06nkc/MathsToolkit-C.git
+cd MathsToolkit-C
+```
+
+### 2️⃣ Compile
+
+**Linux / macOS**
+```bash
+gcc main.c basic_ops.c scientific_ops.c number_ops.c matrix_ops.c stats_ops.c financial_ops.c converter_ops.c realworld_ops.c pattern_ops.c bitwise_ops.c history_ops.c -o toolkit -lm
+```
+
+**Windows (MinGW)**
+```cmd
+gcc main.c basic_ops.c scientific_ops.c number_ops.c matrix_ops.c stats_ops.c financial_ops.c converter_ops.c realworld_ops.c pattern_ops.c bitwise_ops.c history_ops.c -o toolkit.exe -lm
+```
+
+### 3️⃣ Run
+
+**Linux / macOS**
+```bash
+./toolkit
+```
+
+**Windows**
+```cmd
+toolkit.exe
+```
+
+### 4️⃣ Navigate the Menu
+- Enter your name when prompted
+- Choose options **1–11** for modules
+- Use **Back** options inside sub-menus to return
+- Choose **12** to exit
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository (GitHub UI)
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/my-change
+   ```
+3. Commit and push:
+   ```bash
+   git add .
+   git commit -m "Describe the change"
+   git push origin feature/my-change
+   ```
+4. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+If you find this project helpful, consider giving it a ⭐ on GitHub.  
+**Made with ❤️ by Nitish Kumar Chaudhary (NKC)**
+
+*Last Updated: FEBRUARY 2025*
 

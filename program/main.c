@@ -25,6 +25,7 @@ Date           : 25-01-2026
 #include "converter_ops.h"
 #include "realworld_ops.h"
 #include "pattern_ops.h"
+#include "bitwise_ops.h"
 #include "history_ops.h"
 
 int main() {
@@ -54,14 +55,15 @@ int main() {
         printf("\n7. Conversion System");
         printf("\n8. Real World Utilities");
         printf("\n9. Patterns(Star + Number)");
-        printf("\n10. History");
-        printf("\n11. Exit\n");
+        printf("\n10. Bitwise Operations");
+        printf("\n11. History");
+        printf("\n12. Exit\n");
 
         printf("\nEnter your choice: ");
         scanf("%d", &choice);     // Read user menu choice
 
         // Exit option
-        if(choice == 11){
+        if(choice == 12){
             printf("\n%s , Thanks for using this Amazing Maths Tookit!!!\n", name);
             printf("                  Come back Again!!!!\n");
             return 0;              // End program
@@ -483,17 +485,12 @@ int main() {
                     printf("\n4. Matrix Transpose");
                     printf("\n5. Symmetric Matrix Check");
                     printf("\n6. Skew-Symmetric Matrix Check");
-                    printf("\n7. Determinants(Coming Soon!!!)");
+                    printf("\n7. Determinants");
                     printf("\n8. Back\n");
 
                     printf("\nEnter choice: ");
                     scanf("%d",&mop);
 
-                    if(mop==7){   // Placeholder for future feature
-                        printf("\nComing Soon!!!");
-                        printf("Try Another Features in Mean Time.\n");
-                        break;
-                    }
                     if(mop==8) break;   // Exit matrix menu
 
                     switch(mop) {
@@ -503,6 +500,24 @@ int main() {
                         case 4: matrix_transpose(); break;  // Matrix transpose
                         case 5: symmetric_matrix(); break;    // Symmetric matrix check
                         case 6: skew_symmetric_matrix(); break; // Skew-symmetric check
+                        case 7: {
+                                int n;
+                                printf("\nEnter order of square matrix: ");
+                                scanf("%d", &n);
+
+                                int A[n][n];
+                                printf("\nEnter Matrix:\n");
+                                for (int i = 0; i < n; i++) {
+                                    for (int j = 0; j < n; j++) {
+                                        scanf("%d", &A[i][j]);
+                                    }
+                                }
+
+                                int det = determinant_calc(n, A);
+                                printf("\nDeterminant = %d\n", det);
+                                break;
+                            }
+
                         default: printf("\nInvalid choice\n");
                     }
                 }
@@ -517,17 +532,23 @@ int main() {
                     printf("\n1. Mean");
                     printf("\n2. Median");
                     printf("\n3. Mode");
-                    printf("\n4. Back\n");
+                    printf("\n4. Range");
+                    printf("\n5. Variance");
+                    printf("\n6. Standard Deviation");
+                    printf("\n7. Back\n");
 
                     printf("\nEnter choice: ");
                     scanf("%d",&sop);
 
-                    if(sop==4) break;   // Exit statistics menu
+                    if(sop==7) break;   // Exit statistics menu
 
                     switch(sop) {
                         case 1: mean_calc(); break;     // Mean calculation
                         case 2: median_calc(); break;   // Median calculation
                         case 3: mode_calc(); break;     // Mode calculation
+                        case 4: range_calc(); break;    // Range calculation
+                        case 5: variance_calc(); break; // Variance calculation
+                        case 6: stddev_calc(); break;   // Standard deviation calculation
                         default: printf("\nInvalid choice\n");
                     }
                 }
@@ -539,20 +560,42 @@ int main() {
 
                 while(1) {   // Loop for finance submenu
                     printf("\n--- FINANCIAL CALCULATORS ---");
-                    printf("\n1. Simple Interest");
-                    printf("\n2. Compound Interest");
+                    printf("\n1. Simple Interest Calculator");
+                    printf("\n2. Compound Interest Calculator");
                     printf("\n3. Currency Exchange Calculator");
-                    printf("\n4. Back\n");
+                    printf("\n4. Profit & Loss Calculator");
+                    printf("\n5. MRP Discount Calculator");
+                    printf("\n6. Salary Calculator");
+                    printf("\n7. Income Tax Calculator");
+                    printf("\n8. GST Calculator");
+                    printf("\n9. Loan Calculator");
+                    printf("\n10. SIP Calculator");
+                    printf("\n11. Depreciation Calculator");
+                    printf("\n12. FD / RD Calculator");
+                    printf("\n13. Inflation Calculator");
+                    printf("\n14. Retirement Calculator");
+                    printf("\n15. Back\n");
 
                     printf("\nEnter choice: ");
                     scanf("%d",&fop);
 
-                    if(fop==4) break;   // Exit finance menu
+                    if(fop==15) break;   // Exit finance menu
 
                     switch(fop) {
-                        case 1: simple_interest(); break;      // Simple interest
-                        case 2: compound_interest(); break;    // Compound interest
-                        case 3: currency_exchange(); break;    // Currency converter
+                        case 1: simple_interest(); break;        // Simple interest
+                        case 2: compound_interest(); break;      // Compound interest
+                        case 3: currency_exchange(); break;      // Currency exchange
+                        case 4: profit_loss_calculator(); break; // Profit & Loss
+                        case 5: mrp_discount_calculator(); break; // MRP discount
+                        case 6: salary_calculator(); break;      // Salary calculator
+                        case 7: income_tax_calculator(); break; // Income tax
+                        case 8: gst_calculator(); break;         // GST calculator
+                        case 9: loan_calculator(); break;        // Loan calculator
+                        case 10: sip_calculator(); break;        // SIP calculator
+                        case 11: depreciation_calculator(); break;// Depreciation
+                        case 12: fd_rd_calculator(); break;      // FD / RD calculator
+                        case 13: inflation_calculator(); break;  // Inflation calculator
+                        case 14: retirement_calculator(); break; // Retirement calculator
                         default: printf("\nInvalid choice\n");
                     }
                 }
@@ -860,18 +903,24 @@ int main() {
                     printf("\n2. Percentage Calculator");
                     printf("\n3. Leap Year Checker");
                     printf("\n4. ASCII Value Finder");
-                    printf("\n5. Back\n");
+                    printf("\n5. Time Zone Converter");
+                    printf("\n6. Age Calculator");
+                    printf("\n7. Date Difference Calculator");
+                    printf("\n8. Back\n");
 
                     printf("\nEnter choice: ");
                     scanf("%d",&rop);
 
-                    if(rop==5) break;   // Exit real-world menu
+                    if(rop==8) break;   // Exit real-world menu
 
                     switch(rop) {
                         case 1: bmi_calculator(); break;          // BMI tool
                         case 2: percentage_calculator(); break;   // Percentage tool
                         case 3: leap_year_checker(); break;        // Leap year check
                         case 4: ascii_finder(); break;              // ASCII finder
+                        case 5: time_zone_converter(); break;      // Time zone converter
+                        case 6: age_calculator(); break;           // Age calculator
+                        case 7: date_difference_calculator(); break;// Date difference
                         default: printf("\nInvalid choice\n");
                     }
                 }
@@ -967,7 +1016,38 @@ int main() {
                 break;   // Exit pattern case
             }
 
-            case 10: {   // ===== HISTORY MENU =====
+            case 10: {   // ===== BITWISE OPERATIONS MENU =====
+                int bop;   // Bitwise operation choice
+
+                while(1) {   // Loop for bitwise submenu
+                    printf("\n--- BITWISE OPERATIONS ---");
+                    printf("\n1. Bitwise AND");
+                    printf("\n2. Bitwise OR");
+                    printf("\n3. Bitwise XOR");
+                    printf("\n4. Bitwise NOT");
+                    printf("\n5. Left Shift");
+                    printf("\n6. Right Shift");
+                    printf("\n7. Back\n");
+
+                    printf("\nEnter choice: ");
+                    scanf("%d",&bop);
+
+                    if(bop==7) break;   // Exit bitwise menu
+
+                    switch(bop) {
+                        case 1: bitwise_and(); break;    // Bitwise AND
+                        case 2: bitwise_or(); break;     // Bitwise OR
+                        case 3: bitwise_xor(); break;    // Bitwise XOR
+                        case 4: bitwise_not(); break;    // Bitwise NOT
+                        case 5: left_shift(); break;     // Left shift
+                        case 6: right_shift(); break;    // Right shift
+                        default: printf("\nInvalid choice\n");
+                    }
+                }
+                break;   // Exit bitwise case
+            }
+
+            case 11: {   // ===== HISTORY MENU =====
                 int hop;   // History option choice
 
                 while(1) {

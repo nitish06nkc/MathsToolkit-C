@@ -2,6 +2,7 @@
 #define BASIC_OPS_H
 
 // Basic arithmetic operation function declarations
+
 // Each function takes number of inputs (n) from user
 
 int add(int n);        // Add n numbers

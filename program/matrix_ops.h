@@ -19,4 +19,7 @@ void symmetric_matrix();
 // Check if matrix is Skew-Symmetric
 void skew_symmetric_matrix();
 
+// Calculate determinant of a matrix
+int determinant_calc(int n, int matrix[n][n]);
+
 #endif

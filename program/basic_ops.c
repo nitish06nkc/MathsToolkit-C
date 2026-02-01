@@ -14,6 +14,7 @@ int add(int n) {
         sum += num;
 
         // append number to history string
+        
         char temp[20];
         sprintf(temp, "%d ", num);
         strcat(log, temp);

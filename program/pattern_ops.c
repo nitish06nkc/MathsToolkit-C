@@ -3,6 +3,7 @@
 #include "history_ops.h"
 #include <string.h>
 
+
 // Log pattern usage in history file
 void log_pattern(const char *name, int n) {
     char log[200];

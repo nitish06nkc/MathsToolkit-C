@@ -15,6 +15,7 @@ void save_history(const char *text) {
 }
 
 // Display all saved history entries
+
 void view_history() {
     FILE *fp = fopen("history.txt", "r");   // Open file in read mode
 

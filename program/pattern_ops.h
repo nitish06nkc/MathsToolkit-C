@@ -1,6 +1,7 @@
 #ifndef PATTERN_OPS_H
 #define PATTERN_OPS_H
 
+
 // -------- STAR PATTERN FUNCTIONS --------
 void right_triangle();                 // Prints right triangle star pattern
 void inverted_right_triangle();        // Prints inverted right triangle

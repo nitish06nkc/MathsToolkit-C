@@ -1,6 +1,7 @@
 #ifndef NUMBER_OPS_H
 #define NUMBER_OPS_H
 
+
 // Prime number check
 int is_prime(int n);
 

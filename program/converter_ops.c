@@ -2040,6 +2040,7 @@ void octal_to_hex() {
 }
 
 // Hexadecimal to Octal
+
 void hex_to_octal() {
     int n;
     printf("\nEnter Hexadecimal: ");
