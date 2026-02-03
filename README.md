@@ -118,26 +118,16 @@ cd MathsToolkit-C
 
 ### 2️⃣ Compile
 
-**Linux / macOS**
+**Linux / Windows / macOS**
 ```bash
 gcc main.c basic_ops.c scientific_ops.c number_ops.c matrix_ops.c stats_ops.c financial_ops.c converter_ops.c realworld_ops.c pattern_ops.c bitwise_ops.c history_ops.c -o toolkit -lm
 ```
 
-**Windows (MinGW)**
-```cmd
-gcc main.c basic_ops.c scientific_ops.c number_ops.c matrix_ops.c stats_ops.c financial_ops.c converter_ops.c realworld_ops.c pattern_ops.c bitwise_ops.c history_ops.c -o toolkit.exe -lm
-```
-
 ### 3️⃣ Run
 
-**Linux / macOS**
+**Linux / Windows / macOS**
 ```bash
 ./toolkit
-```
-
-**Windows**
-```cmd
-toolkit.exe
 ```
 
 ### 4️⃣ Navigate the Menu
