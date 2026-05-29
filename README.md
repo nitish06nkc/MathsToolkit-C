@@ -114,6 +114,7 @@ MathsToolkit-C/program/
 ```bash
 git clone https://github.com/nitish06nkc/MathsToolkit-C.git
 cd MathsToolkit-C
+cd program
 ```
 
 ### 2️⃣ Compile
@@ -161,8 +162,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-If you find this project helpful, consider giving it a ⭐ on GitHub.  
-**Made with ❤️ by Nitish Kumar Chaudhary (NKC)**
+If you find this project helpful, consider giving it a ⭐ on GitHub.
 
-*Last Updated: FEBRUARY 2025*
+*Last Updated: May 2025*
 
